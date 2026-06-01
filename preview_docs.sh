@@ -1,17 +1,19 @@
 #!/bin/bash
 # =============================================================================
-# preview_docs.sh — 文档 PR 预览辅助脚本
+# preview_docs.sh — Doc PR preview helper script
 #
-# 为 pingcap-docsite-preview 仓库创建预览分支并触发 workflow。
+# Creates preview branches on pingcap-docsite-preview and triggers the
+# corresponding GitHub Actions workflow to sync PR content for Cloudflare
+# docsite preview deployments.
 # 
-# 用法:
-#   # 单 PR 预览
+# Usage:
+#   # Single PR preview
 #   ./preview_docs.sh --pr docs 12345
 #   ./preview_docs.sh --pr docs-cn 12345
 #   ./preview_docs.sh --pr cloud 12345
 #   ./preview_docs.sh --pr operator 12345
 #
-#   # 多 PR 预览
+#   # Multi-PR preview
 #   ./preview_docs.sh --multi \
 #       --branch-name preview/release-8.5 \
 #       --docs-pr 12345 \
@@ -20,14 +22,14 @@
 #       --operator-pr 22222 \
 #       --release-dir release-8.5
 #
-#   # 先看效果（不实际执行）
+#   # Dry-run (plan only, no execution)
 #   ./preview_docs.sh --dry-run --pr docs 12345
 #
-# 注意事项:
-#   1. 单 PR 模式下，sync_pr.yml 的 push 触发条件 (preview/**) 会自动匹配分支名
-#   2. 多 PR 模式下，脚本会修改 sync_mult_prs.yml 添加 push 触发和 PR 号环境变量
-#   3. Cloudflare 构建是自动的，无需额外操作
-#   4. 成功示例: https://github.com/doc-claw-bot/pingcap-docsite-preview/runs/78489433899
+# Notes:
+#   1. Single PR mode: sync_pr.yml push trigger (preview/**) auto-matches branch name
+#   2. Multi PR mode: script modifies sync_mult_prs.yml adding push trigger + env vars
+#   3. Cloudflare build is automatic after workflow completes
+#   4. Example successful run: https://github.com/doc-claw-bot/pingcap-docsite-preview/runs/78489433899
 # =============================================================================
 
 set -euo pipefail
@@ -36,10 +38,10 @@ REPO_DIR="/home/doc-claw/github/pingcap-docsite-preview"
 REMOTE="origin"
 DRY_RUN=false
 
-# ---- 参数解析 ----
-ACTION=""       # single 或 multi
+# ---- Argument parsing ----
+ACTION=""       # "single" or "multi"
 PR_TYPE=""      # docs, docs-cn, cloud, operator
-PR_NUM=""       # 单 PR 模式: PR 号
+PR_NUM=""       # single-PR mode: PR number
 DOCS_PR=""
 DOCS_CN_PR=""
 CLOUD_PR=""
@@ -48,7 +50,8 @@ RELEASE_DIR=""
 BRANCH_NAME=""
 
 usage() {
-    sed -n '/^# 用法:/,/^注意事项:/p' "$0" | head -n -1 | sed 's/^# //; s/^#$//'
+    # Print the Usage section from the header comments (between Usage: and Notes: markers)
+    sed -n '/^# Usage:/,/^# Notes:/p' "$0" | head -n -1 | sed 's/^# //; s/^#$//'
     exit 1
 }
 
@@ -102,7 +105,7 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-# ---- 校验参数 ----
+# ---- Argument validation ----
 if [[ "$ACTION" != "single" && "$ACTION" != "multi" ]]; then
     echo "错误: 请指定 --pr (单 PR) 或 --multi (多 PR)"
     usage
@@ -140,7 +143,7 @@ if [[ "$ACTION" == "multi" ]]; then
     fi
 fi
 
-# ---- 打印计划 ----
+# ---- Print plan ----
 echo "═══════════════════════════════════════════"
 echo "  文档 PR 预览"
 echo "═══════════════════════════════════════════"
@@ -160,12 +163,12 @@ echo "  本地仓库:     $REPO_DIR"
 echo "  干运行:       $DRY_RUN"
 echo "═══════════════════════════════════════════"
 
-# ---- 执行 ----
+# ---- Execution ----
 
-# 1. 进入仓库目录
+# Step 1: Enter the repo directory
 cd "$REPO_DIR"
 
-# 2. 确保 main 是最新的
+# Step 2: Ensure main is up-to-date
 echo ""
 echo "⟳ 获取 main 最新代码..."
 if [[ "$DRY_RUN" == true ]]; then
@@ -177,13 +180,13 @@ else
     echo "  ✓ main 已更新"
 fi
 
-# 3. 创建新分支
+# Step 3: Create a new branch from main
 echo ""
 echo "⟳ 创建分支: $BRANCH_NAME..."
 if [[ "$DRY_RUN" == true ]]; then
     echo "  [干运行] git checkout -b $BRANCH_NAME"
 else
-    # 如果本地分支已存在，先删除
+    # Delete local branch if it already exists
     if git branch --list "$BRANCH_NAME" | grep -q .; then
         git branch -D "$BRANCH_NAME"
         echo "  ! 已删除本地已存在的同名分支"
@@ -192,7 +195,7 @@ else
     echo "  ✓ 分支已创建"
 fi
 
-# 4. 多 PR 模式: 修改 sync_mult_prs.yml
+# Step 4: For multi-PR mode, modify sync_mult_prs.yml
 if [[ "$ACTION" == "multi" ]]; then
     echo ""
     echo "⟳ 修改 sync_mult_prs.yml 添加 PR 配置..."
@@ -209,7 +212,7 @@ if [[ "$ACTION" == "multi" ]]; then
         [[ -n "$OPERATOR_PR" ]]  && echo "      OPERATOR_PR: $OPERATOR_PR"
         echo "      RELEASE_DIR: $RELEASE_DIR"
     else
-        # 用 Python 修改 YAML
+        # Modify the workflow YAML via inline Python
         python3 << PYEOF
 import sys
 
@@ -224,7 +227,7 @@ release_dir = "$RELEASE_DIR"
 with open(workflow_file, 'r') as f:
     content = f.read()
 
-# 1. 添加 push 触发: 在 "on:" 后插入 "push: branches: [...]"
+# Step 1: Insert push trigger after "on:" — add branch to push branches
 old_on = "on:\n  workflow_dispatch:"
 new_on = f"""on:
   push:
@@ -233,7 +236,7 @@ new_on = f"""on:
   workflow_dispatch:"""
 content = content.replace(old_on, new_on, 1)
 
-# 2. 在 GITHUB_TOKEN 行之后添加 env vars
+# Step 2: Append PR env vars after the GITHUB_TOKEN line
 env_vars = []
 if docs_pr:
     env_vars.append(f"      DOCS_PR: {docs_pr}")
@@ -257,7 +260,7 @@ PYEOF
     fi
 fi
 
-# 5. Commit 和 Push
+# Step 5: Commit and push
 echo ""
 echo "⟳ 提交并推送..."
 
@@ -279,7 +282,7 @@ else
     echo "  ✓ 已推送"
 fi
 
-# 6. 结果
+# Step 6: Print result summary
 echo ""
 echo "═══════════════════════════════════════════"
 echo "  ✅ 预览已就绪！"
