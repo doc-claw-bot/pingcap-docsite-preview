@@ -26,3 +26,4 @@ jobs:
         ./.github/git_push.sh ${{ github.ref_name }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SINGLE_COMMIT: true

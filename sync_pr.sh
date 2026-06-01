@@ -233,6 +233,11 @@ commit_changes() {
   test -n "$TEST" && echo "Test mode, returning..." && return 0
   # Handle untracked files.
   git add .
+  # When SINGLE_COMMIT is set, defer the commit to accumulate all changes.
+  # This avoids multiple commits (and thus multiple Cloudflare builds) per preview sync.
+  if [ -n "${SINGLE_COMMIT}" ]; then
+    return 0
+  fi
   # Commit changes, if any.
   git commit -m "$mess" || echo "No changes to commit"
 }
@@ -263,4 +268,7 @@ get_destination_suffix
 clone_repo
 perform_sync_task
 
-commit_changes "Finalize preview sync"
+# Final commit — always commits, even in SINGLE_COMMIT mode (which defers intermediate commits)
+# This ensures only one commit per preview sync, avoiding multiple Cloudflare builds.
+git add .
+git commit -m "Sync preview for PR https://github.com/$REPO_OWNER/$REPO_NAME/pull/$PR_NUMBER" || echo "No changes to commit"
