@@ -50,7 +50,7 @@ RELEASE_DIR=""
 BRANCH_NAME=""
 
 usage() {
-    # Print the Usage section from the header comments (between Usage: and Notes: markers)
+    # Print the Usage section from the header comments
     sed -n '/^# Usage:/,/^# Notes:/p' "$0" | head -n -1 | sed 's/^# //; s/^#$//'
     exit 1
 }
@@ -99,7 +99,7 @@ while [[ $# -gt 0 ]]; do
             usage
             ;;
         *)
-            echo "错误: 未知参数: $1"
+            echo "Error: unknown argument: $1"
             usage
             ;;
     esac
@@ -107,13 +107,13 @@ done
 
 # ---- Argument validation ----
 if [[ "$ACTION" != "single" && "$ACTION" != "multi" ]]; then
-    echo "错误: 请指定 --pr (单 PR) 或 --multi (多 PR)"
+    echo "Error: specify --pr (single PR) or --multi (multiple PRs)"
     usage
 fi
 
 if [[ "$ACTION" == "single" ]]; then
     if [[ -z "$PR_TYPE" || -z "$PR_NUM" ]]; then
-        echo "错误: --pr 需要指定类型和 PR 号，例如: --pr docs 12345"
+        echo "Error: --pr requires a type and PR number, e.g. --pr docs 12345"
         usage
     fi
     case "$PR_TYPE" in
@@ -122,7 +122,7 @@ if [[ "$ACTION" == "single" ]]; then
         cloud)      BRANCH_NAME="preview-cloud/pingcap/docs/$PR_NUM" ;;
         operator)   BRANCH_NAME="preview-operator/pingcap/docs-tidb-operator/$PR_NUM" ;;
         *)
-            echo "错误: 支持的 PR 类型: docs, docs-cn, cloud, operator"
+            echo "Error: supported PR types: docs, docs-cn, cloud, operator"
             exit 1
             ;;
     esac
@@ -130,82 +130,82 @@ fi
 
 if [[ "$ACTION" == "multi" ]]; then
     if [[ -z "$BRANCH_NAME" ]]; then
-        echo "错误: 多 PR 模式需要 --branch-name 指定分支名"
+        echo "Error: multi-PR mode requires --branch-name"
         usage
     fi
     if [[ -z "$DOCS_PR" && -z "$DOCS_CN_PR" && -z "$CLOUD_PR" && -z "$OPERATOR_PR" ]]; then
-        echo "错误: 多 PR 模式至少需要指定一个 PR (--docs-pr, --docs-cn-pr, --cloud-pr, --operator-pr)"
+        echo "Error: multi-PR mode requires at least one PR (--docs-pr, --docs-cn-pr, --cloud-pr, --operator-pr)"
         usage
     fi
     if [[ -z "$RELEASE_DIR" ]]; then
-        echo "错误: 多 PR 模式需要 --release-dir 指定 release 目录 (例如 release-8.5)"
+        echo "Error: multi-PR mode requires --release-dir (e.g. release-8.5)"
         usage
     fi
 fi
 
 # ---- Print plan ----
 echo "═══════════════════════════════════════════"
-echo "  文档 PR 预览"
+echo "  Doc PR Preview"
 echo "═══════════════════════════════════════════"
 if [[ "$ACTION" == "single" ]]; then
-    echo "  模式:         单 PR"
-    echo "  类型:         $PR_TYPE ($PR_NUM)"
+    echo "  Mode:         Single PR"
+    echo "  Type:         $PR_TYPE ($PR_NUM)"
 else
-    echo "  模式:         多 PR"
+    echo "  Mode:         Multi PR"
     [[ -n "$DOCS_PR" ]]      && echo "  docs PR:      $DOCS_PR"
     [[ -n "$DOCS_CN_PR" ]]   && echo "  docs-cn PR:   $DOCS_CN_PR"
     [[ -n "$CLOUD_PR" ]]     && echo "  cloud PR:     $CLOUD_PR"
     [[ -n "$OPERATOR_PR" ]]  && echo "  operator PR:  $OPERATOR_PR"
-    echo "  release 目录: $RELEASE_DIR"
+    echo "  Release dir:  $RELEASE_DIR"
 fi
-echo "  分支:         $BRANCH_NAME"
-echo "  本地仓库:     $REPO_DIR"
-echo "  干运行:       $DRY_RUN"
+echo "  Branch:       $BRANCH_NAME"
+echo "  Local repo:   $REPO_DIR"
+echo "  Dry run:      $DRY_RUN"
 echo "═══════════════════════════════════════════"
 
 # ---- Execution ----
 
-# Step 1: Enter the repo directory
+# Step 1: cd into the repo
 cd "$REPO_DIR"
 
-# Step 2: Ensure main is up-to-date
+# Step 2: Fetch latest main
 echo ""
-echo "⟳ 获取 main 最新代码..."
+echo "> Fetching latest main..."
 if [[ "$DRY_RUN" == true ]]; then
-    echo "  [干运行] git fetch $REMOTE main"
-    echo "  [干运行] git checkout main"
+    echo "  [dry-run] git fetch $REMOTE main"
+    echo "  [dry-run] git checkout main"
 else
     git fetch "$REMOTE" main
     git checkout main
-    echo "  ✓ main 已更新"
+    echo "  ✓ main updated"
 fi
 
-# Step 3: Create a new branch from main
+# Step 3: Create new branch from main
 echo ""
-echo "⟳ 创建分支: $BRANCH_NAME..."
+echo "> Creating branch: $BRANCH_NAME..."
 if [[ "$DRY_RUN" == true ]]; then
-    echo "  [干运行] git checkout -b $BRANCH_NAME"
+    echo "  [dry-run] git checkout -b $BRANCH_NAME"
 else
-    # Delete local branch if it already exists
+    # Remove existing local branch with the same name
     if git branch --list "$BRANCH_NAME" | grep -q .; then
         git branch -D "$BRANCH_NAME"
-        echo "  ! 已删除本地已存在的同名分支"
+        echo "  ! Deleted existing local branch with same name"
     fi
     git checkout -b "$BRANCH_NAME"
-    echo "  ✓ 分支已创建"
+    echo "  ✓ Branch created"
 fi
 
 # Step 4: For multi-PR mode, modify sync_mult_prs.yml
 if [[ "$ACTION" == "multi" ]]; then
     echo ""
-    echo "⟳ 修改 sync_mult_prs.yml 添加 PR 配置..."
+    echo "> Updating sync_mult_prs.yml with PR config..."
 
     WORKFLOW_FILE=".github/workflows/sync_mult_prs.yml"
 
     if [[ "$DRY_RUN" == true ]]; then
-        echo "  [干运行] 在 $WORKFLOW_FILE 中添加:"
+        echo "  [dry-run] Modify $WORKFLOW_FILE:"
         echo "    - push: branches: [$BRANCH_NAME]"
-        echo "    - env 变量:"
+        echo "    - env vars:"
         [[ -n "$DOCS_PR" ]]      && echo "      DOCS_PR: $DOCS_PR"
         [[ -n "$DOCS_CN_PR" ]]   && echo "      DOCS_CN_PR: $DOCS_CN_PR"
         [[ -n "$CLOUD_PR" ]]     && echo "      CLOUD_PR: $CLOUD_PR"
@@ -227,7 +227,7 @@ release_dir = "$RELEASE_DIR"
 with open(workflow_file, 'r') as f:
     content = f.read()
 
-# Step 1: Insert push trigger after "on:" — add branch to push branches
+# Insert push trigger after "on:"
 old_on = "on:\n  workflow_dispatch:"
 new_on = f"""on:
   push:
@@ -236,7 +236,7 @@ new_on = f"""on:
   workflow_dispatch:"""
 content = content.replace(old_on, new_on, 1)
 
-# Step 2: Append PR env vars after the GITHUB_TOKEN line
+# Append PR env vars after the GITHUB_TOKEN line
 env_vars = []
 if docs_pr:
     env_vars.append(f"      DOCS_PR: {docs_pr}")
@@ -255,49 +255,49 @@ for var in env_vars:
 with open(workflow_file, 'w') as f:
     f.write(content)
 
-print("  ✓ sync_mult_prs.yml 已更新")
+print("  ✓ sync_mult_prs.yml updated")
 PYEOF
     fi
 fi
 
 # Step 5: Commit and push
 echo ""
-echo "⟳ 提交并推送..."
+echo "> Committing and pushing..."
 
 if [[ "$DRY_RUN" == true ]]; then
-    echo "  [干运行] git add . && git commit -m \"Preview: $BRANCH_NAME\""
-    echo "  [干运行] git push $REMOTE $BRANCH_NAME"
+    echo "  [dry-run] git add . && git commit -m \"Preview: $BRANCH_NAME\""
+    echo "  [dry-run] git push $REMOTE $BRANCH_NAME"
 else
     git add .
     if git diff --cached --quiet; then
-        echo "  ! 没有变更需要提交"
+        echo "  ! No changes to commit"
     else
         git commit -m "Preview: $BRANCH_NAME"
-        echo "  ✓ 已提交"
+        echo "  ✓ Committed"
     fi
 
     echo ""
-    echo "⟳ 推送到远程..."
+    echo "> Pushing to remote..."
     git push "$REMOTE" "$BRANCH_NAME"
-    echo "  ✓ 已推送"
+    echo "  ✓ Pushed"
 fi
 
 # Step 6: Print result summary
 echo ""
 echo "═══════════════════════════════════════════"
-echo "  ✅ 预览已就绪！"
+echo "  ✅ Preview ready!"
 echo "═══════════════════════════════════════════"
-echo "  分支:  $BRANCH_NAME"
-echo "  仓库:  https://github.com/doc-claw-bot/pingcap-docsite-preview"
+echo "  Branch:   $BRANCH_NAME"
+echo "  Repo:     https://github.com/doc-claw-bot/pingcap-docsite-preview"
 
 if [[ "$ACTION" == "multi" ]]; then
     echo ""
-    echo "  多 PR 配置已推送到分支 workflow 文件。"
-    echo "  注意: 同步 PR 后，Cloudflare 会自动构建预览。"
-    echo "  如需定期更新，请继续配置 sync_scheduler.yml。"
+    echo "  Multi-PR config pushed on the branch workflow file."
+    echo "  Cloudflare will auto-build once the workflow syncs the PRs."
+    echo "  For periodic updates, configure sync_scheduler.yml."
 fi
 
 echo ""
-echo "  查看运行状态:"
+echo "  Check workflow status:"
 echo "  https://github.com/doc-claw-bot/pingcap-docsite-preview/actions"
 echo "═══════════════════════════════════════════"
