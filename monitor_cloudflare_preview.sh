@@ -66,7 +66,15 @@ REPO_NAME="docs"
 if [ "$PRODUCT" = "preview-cloud" ]; then
   PREFIX="/tidbcloud/master"
 else
-  PREFIX="/tidb/stable"
+  # Query PR base branch to determine prefix: master→/tidb/dev, release-*→/tidb/stable
+  BASE_BRANCH=$(curl -sf -H "Accept: application/vnd.github+json" \
+    "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/pulls/$PR_NUM" 2>/dev/null | \
+    jq -r '.base.ref // "release-8.5"')
+  if [ "$BASE_BRANCH" = "master" ]; then
+    PREFIX="/tidb/dev"
+  else
+    PREFIX="/tidb/stable"
+  fi
 fi
 
 # Build PR preview URLs array
