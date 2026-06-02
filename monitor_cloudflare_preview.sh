@@ -78,7 +78,7 @@ if [ -n "$PREVIEW_URL" ] && [ -n "$PR_NUM" ]; then
 
   if [ -n "$CHANGED_FILES" ] && [ "$CHANGED_FILES" != "[]" ]; then
     PR_URLS_JSON=$(echo "$CHANGED_FILES" | jq -r --arg base "$PREVIEW_URL" --arg prefix "$PREFIX" \
-      '[.[] | $base + $prefix + "/" + (rtrimstr(".md") | gsub("/index$";"/")) + "/" ]')
+      '[.[] | $base + $prefix + "/" + ((split("/") | .[-1]) | rtrimstr(".md")) + "/" ]')
   fi
 fi
 
