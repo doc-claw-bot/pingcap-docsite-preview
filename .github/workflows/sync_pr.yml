@@ -1,4 +1,5 @@
 name: Sync doc changes from a PR
+run-name: Preview ${{ github.ref_name }}
 
 on:
   push:
