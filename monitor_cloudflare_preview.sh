@@ -78,7 +78,20 @@ if [ -n "$PREVIEW_URL" ] && [ -n "$PR_NUM" ]; then
 
   if [ -n "$CHANGED_FILES" ] && [ "$CHANGED_FILES" != "[]" ]; then
     PR_URLS_JSON=$(echo "$CHANGED_FILES" | jq -r --arg base "$PREVIEW_URL" --arg prefix "$PREFIX" \
-      '[.[] | $base + $prefix + "/" + ((split("/") | .[-1]) | rtrimstr(".md")) + "/" ]')
+      '[.[] |
+        if startswith("tidb-cloud/") then
+          $base + "/tidbcloud/" + (split("/") | .[-1] | rtrimstr(".md")) + "/"
+        elif startswith("api/") then
+          $base + $prefix + "/api/" + (split("/") | .[-1] | rtrimstr(".md")) + "/"
+        elif startswith("ai/") then
+          $base + $prefix + "/ai/" + (split("/") | .[-1] | rtrimstr(".md")) + "/"
+        elif startswith("develop/") then
+          $base + $prefix + "/developer/" + (split("/") | .[-1] | rtrimstr(".md")) + "/"
+        elif startswith("best-practices/") then
+          $base + $prefix + "/best-practices/" + (split("/") | .[-1] | rtrimstr(".md")) + "/"
+        else
+          $base + $prefix + "/" + (split("/") | .[-1] | rtrimstr(".md")) + "/"
+        end]')
   fi
 fi
 
