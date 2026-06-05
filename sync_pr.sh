@@ -182,6 +182,35 @@ perform_sync_task() {
 
     commit_changes "Post-process docs (variables replaced, copyable removed)"
 
+    # For preview/pingcap/docs PRs that modify tidb-cloud/ content,
+    # also sync those files to the tidbcloud product area under en/tidbcloud/master.
+    # Without this, tidb-cloud/ files end up in tidb/{branch}/tidb-cloud/ and the
+    # Cloudflare preview routes them incorrectly (the site expects them at tidbcloud/).
+    if [[ "$PREVIEW_PRODUCT" == "preview" ]]; then
+      CLOUD_FILES=$(echo "$CHANGED_FILES" | grep "^tidb-cloud/" || true)
+      if [[ -n "$CLOUD_FILES" ]]; then
+        CLOUD_DEST_DIR="markdown-pages/en/tidbcloud/master"
+        mkdir -p "$CLOUD_DEST_DIR"
+
+        # Strip tidb-cloud/ prefix and rsync into tidbcloud/ area
+        echo "$CLOUD_FILES" | sed 's|^tidb-cloud/||' | \
+          rsync -av --files-from=- "$SRC_DIR/tidb-cloud/" "$CLOUD_DEST_DIR/"
+
+        # Post-process: replace variables, remove copyable strings
+        if [[ -f "$CLOUD_DEST_DIR/variables.json" ]]; then
+          ./scripts/replace_variables.py "$CLOUD_DEST_DIR" "$CLOUD_DEST_DIR/variables.json"
+        fi
+        (cd "$CLOUD_DEST_DIR" && remove_copyable)
+
+        # Rename TOC-tidb-cloud.md → TOC.md for cloud preview
+        if [[ -f "$CLOUD_DEST_DIR/TOC-tidb-cloud.md" ]]; then
+          process_cloud_toc "$CLOUD_DEST_DIR"
+        fi
+
+        commit_changes "Sync cloud (tidb-cloud/) files from PR ${PR_NUMBER} to tidbcloud/master"
+      fi
+    fi
+
     # Sync TOC namespace folders to the target branch path when TARGET_BRANCH differs.
     if [[ -n "$TOC_TARGET_BRANCH" && "$TARGET_BRANCH" != "$TOC_TARGET_BRANCH" ]]; then
       TOC_TARGET_DIR="$(dirname "$DEST_DIR")/$TOC_TARGET_BRANCH"
