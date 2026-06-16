@@ -48,7 +48,7 @@
             -   [TypeORM](/develop/dev-guide-sample-application-nodejs-typeorm.md)
             -   [Next.js](/develop/dev-guide-sample-application-nextjs.md)
             -   [AWS Lambda](/develop/dev-guide-sample-application-aws-lambda.md)
-        -   ルビー
+        -   Ruby
             -   [mysql2](/develop/dev-guide-sample-application-ruby-mysql2.md)
             -   [Rails](/develop/dev-guide-sample-application-ruby-rails.md)
         -   C#
@@ -75,7 +75,7 @@
     -   [複数テーブル結合クエリ](/develop/dev-guide-join-tables.md)
     -   [サブクエリ](/develop/dev-guide-use-subqueries.md)
     -   [結果のページ分割](/develop/dev-guide-paginate-results.md)
-    -   [閲覧数](/develop/dev-guide-use-views.md)
+    -   [ビュー](/develop/dev-guide-use-views.md)
     -   [一時テーブル](/develop/dev-guide-use-temporary-tables.md)
     -   [共通テーブル式](/develop/dev-guide-use-common-table-expression.md)
     -   レプリカデータの読み取り
@@ -83,9 +83,9 @@
         -   [ステイル読み取り](/develop/dev-guide-use-stale-read.md)
     -   [HTAPクエリ](/develop/dev-guide-hybrid-oltp-and-olap-queries.md)
 -   [ベクトル検索](/develop/dev-guide-vector-search.md)![BETA](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
--   取引の管理
+-   トランザクションの管理
     -   [概要](/develop/dev-guide-transaction-overview.md)
-    -   [楽観的取引と悲観的取引](/develop/dev-guide-optimistic-and-pessimistic-transaction.md)
+    -   [楽観的トランザクションと悲観的トランザクション](/develop/dev-guide-optimistic-and-pessimistic-transaction.md)
     -   [トランザクション制限](/develop/dev-guide-transaction-restraints.md)
     -   [トランザクションエラーの処理](/develop/dev-guide-transaction-troubleshoot.md)
 -   最適化する

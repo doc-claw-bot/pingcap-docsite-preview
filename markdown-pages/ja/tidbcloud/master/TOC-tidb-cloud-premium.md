@@ -17,7 +17,7 @@
     -   [概要](/tidb-cloud/key-concepts.md)
     -   [アーキテクチャ](/tidb-cloud/architecture-concepts.md)
     -   [データベーススキーマ](/tidb-cloud/database-schema-concepts.md)
-    -   [取引](/tidb-cloud/transaction-concepts.md)
+    -   [トランザクション](/tidb-cloud/transaction-concepts.md)
     -   [SQL](/tidb-cloud/sql-concepts.md)
     -   [AI機能](/tidb-cloud/ai-feature-concepts.md)
     -   [拡張性](/tidb-cloud/scalability-concepts.md)
@@ -53,6 +53,7 @@
     -   監視と警告
         -   [概要](/tidb-cloud/monitor-tidb-cluster.md)
         -   [組み込みの指標](/tidb-cloud/premium/built-in-monitoring-premium.md)
+        -   [トップRU](/tidb-cloud/top-ru.md)
         -   [内蔵アラート機能](/tidb-cloud/monitor-built-in-alerting.md)
         -   [TiDB CloudをPrometheusおよびGrafanaと統合する](/tidb-cloud/prometheus-grafana-integration.md)
         -   アラート通知を購読する
@@ -72,7 +73,7 @@
                 -   [MPPに関する質問](/explain-mpp.md)
                 -   [サブクエリ](/explain-subqueries.md)
                 -   [集計](/explain-aggregation.md)
-                -   [閲覧数](/explain-views.md)
+                -   [ビュー](/explain-views.md)
                 -   [パーティション](/explain-partitions.md)
                 -   [インデックスマージ](/explain-index-merge.md)
             -   SQL最適化プロセス
@@ -133,7 +134,7 @@
 -   ストリームデータ
     -   [変更フィードの概要](/tidb-cloud/changefeed-overview.md)
     -   [MySQLシンクへ](/tidb-cloud/changefeed-sink-to-mysql.md)
-    -   [カフカシンクへ](/tidb-cloud/changefeed-sink-to-apache-kafka.md)
+    -   [Kafkaシンクへ](/tidb-cloud/changefeed-sink-to-apache-kafka.md)
     -   参照
         -   [AWSでセルフホスト型のKafkaプライベートリンクサービスをセットアップする](/tidb-cloud/setup-aws-self-hosted-kafka-private-link-service.md)
         -   [Changefeeds用のプライベートエンドポイントを設定する](/tidb-cloud/premium/set-up-sink-private-endpoint-premium.md)
@@ -364,13 +365,13 @@
     -   [生成された列](/generated-columns.md)
     -   [SQLモード](/sql-mode.md)
     -   [テーブル属性](/table-attributes.md)
-    -   取引
+    -   トランザクション
         -   [概要](/transaction-overview.md)
         -   [隔離レベル](/transaction-isolation-levels.md)
-        -   [楽観的な取引](/optimistic-transaction.md)
-        -   [悲観的な取引](/pessimistic-transaction.md)
+        -   [楽観的トランザクション](/optimistic-transaction.md)
+        -   [悲観的トランザクション](/pessimistic-transaction.md)
         -   [非トランザクションDMLステートメント](/non-transactional-dml.md)
-    -   [閲覧数](/views.md)
+    -   [ビュー](/views.md)
     -   [パーティショニング](/partitioned-table.md)
     -   [一時テーブル](/temporary-tables.md)
     -   [キャッシュされたテーブル](/cached-tables.md)
@@ -446,7 +447,7 @@
         -   [TSO](/tso.md)
     -   [TiDB Xアーキテクチャ](/tidb-cloud/tidb-x-architecture.md)
     -   ストレージエンジン
-        -   ティクヴ
+        -   TiKV
             -   [TiKVの概要](/tikv-overview.md)
             -   [RocksDBの概要](/storage-engine/rocksdb-overview.md)
         -   TiFlash
