@@ -16,6 +16,10 @@ concurrency:
 jobs:
 
   sync_pr:
+    # Skip when the push was produced by preview_docs.sh --local-sync, because
+    # the files have already been synchronized locally and pushing again would
+    # only duplicate work.
+    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[local-sync]') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
