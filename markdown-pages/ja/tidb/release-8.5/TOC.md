@@ -2,8 +2,8 @@
 
 <!-- markdownlint-disable MD041 -->
 
--   TiDBセルフマネージドについて
-    -   [TiDBセルフマネージドとは何ですか？](/overview.md)
+-   TiDB Self-Managedについて
+    -   [TiDB Self-Managedとは何ですか？](/overview.md)
     -   [TiDB 8.5 リリースノート](/releases/release-8.5.0.md)
     -   [特徴](/basic-features.md)
     -   [MySQLとの互換性](/mysql-compatibility.md)
@@ -92,7 +92,7 @@
             -   [TiCDC Avroプロトコル](/ticdc/ticdc-avro-protocol.md)
             -   [TiCDC Canal- JSONプロトコル](/ticdc/ticdc-canal-json.md)
             -   [TiCDC CSVプロトコル](/ticdc/ticdc-csv.md)
-            -   [TiCDCデベジウムプロトコル](/ticdc/ticdc-debezium.md)
+            -   [TiCDCDebeziumプロトコル](/ticdc/ticdc-debezium.md)
             -   [TiCDCオープンプロトコル](/ticdc/ticdc-open-protocol.md)
             -   [TiCDCシンプルプロトコル](/ticdc/ticdc-simple-protocol.md)
         -   [TiCDCオープンAPI v2](/ticdc/ticdc-open-api-v2.md)
@@ -105,8 +105,8 @@
     -   [よくある質問](/ticdc/ticdc-faq.md)
     -   [用語集](/ticdc/ticdc-glossary.md)
 -   管理
-    -   Security
-        -   [TiDBSecurityコンフィグレーションのベストプラクティス](/best-practices-for-security-configuration.md)
+    -   セキュリティ
+        -   [TiDBセキュリティ設定のベストプラクティス](/best-practices-for-security-configuration.md)
         -   [TiDBクライアントとサーバー間でTLSを有効にする](/enable-tls-between-clients-and-servers.md)
         -   [TiDBコンポーネント間でTLSを有効にする](/enable-tls-between-components.md)
         -   [自己署名証明書を生成する](/generate-self-signed-certificates.md)
@@ -154,7 +154,7 @@
         -   [マルチレプリカクラスタDR](/dr-multi-replica.md)
         -   [BRベースのDR](/dr-backup-restore.md)
     -   リソースマネージャー
-        -   [リソース制御を使用して、リソースグループの制限とフロー制御を実現します。](/tidb-resource-control-ru-groups.md)
+        -   [リソース制御を使用して、リソースグループの制限とフロー制御を実現します](/tidb-resource-control-ru-groups.md)
         -   [暴走クエリの管理](/tidb-resource-control-runaway-queries.md)
         -   [バックグラウンドタスクの管理](/tidb-resource-control-background-tasks.md)
     -   [タイムゾーンを設定する](/configure-time-zone.md)
@@ -547,12 +547,12 @@
             -   [FAQ](/tidb-lightning/tidb-lightning-faq.md)
             -   [用語集](/tidb-lightning/tidb-lightning-glossary.md)
     -   [Dumpling](/dumpling-overview.md)
-    -   PingCAPクリニック診断サービス
+    -   PingCAP Clinic診断サービス
         -   [概要](/clinic/clinic-introduction.md)
         -   [クイックスタート](/clinic/quick-start-with-clinic.md)
-        -   [PingCAPクリニックを使用してクラスターのトラブルシューティングを行う](/clinic/clinic-user-guide-for-tiup.md)
-        -   [PingCAPクリニックの診断データ](/clinic/clinic-data-instruction-for-tiup.md)
-    -   同期差分検査ツール
+        -   [PingCAP Clinicを使用してクラスターのトラブルシューティングを行う](/clinic/clinic-user-guide-for-tiup.md)
+        -   [PingCAP Clinicの診断データ](/clinic/clinic-data-instruction-for-tiup.md)
+    -   sync-diff-inspector
         -   [概要](/sync-diff-inspector/sync-diff-inspector-overview.md)
         -   [スキーマ名／テーブル名が異なるテーブルのデータチェック](/sync-diff-inspector/route-diff.md)
         -   [シャーディングシナリオにおけるデータチェック](/sync-diff-inspector/shard-diff.md)
@@ -577,8 +577,8 @@
     -   ストレージエンジン - TiKV
         -   [TiKVの概要](/tikv-overview.md)
         -   [RocksDBの概要](/storage-engine/rocksdb-overview.md)
-        -   [タイタンの概要](/storage-engine/titan-overview.md)
-        -   [タイタンコンフィグレーション](/storage-engine/titan-configuration.md)
+        -   [Titanの概要](/storage-engine/titan-overview.md)
+        -   [Titan Configuration](/storage-engine/titan-configuration.md)
         -   [分割されたRaftKV](/partitioned-raft-kv.md)
     -   ストレージエンジン - TiFlash
         -   [概要](/tiflash/tiflash-overview.md)
@@ -626,7 +626,7 @@
         -   [TiCDC](/ticdc/monitor-ticdc.md)
         -   [リソース制御](/grafana-resource-control-dashboard.md)
     -   権限
-        -   [MySQLとのSecurity互換性](/security-compatibility-with-mysql.md)
+        -   [MySQLとのセキュリティ互換性](/security-compatibility-with-mysql.md)
         -   [権限管理](/privilege-management.md)
         -   [列レベルの権限管理](/column-privilege-management.md)
         -   [ユーザーアカウント管理](/user-account-management.md)
@@ -636,8 +636,8 @@
     -   SQL
         -   SQL言語の構造と構文
             -   属性
-                -   [自動インクリメント](/auto-increment.md)
-                -   [自動乱数](/auto-random.md)
+                -   [AUTO_INCREMENT](/auto-increment.md)
+                -   [AUTO_RANDOM](/auto-random.md)
                 -   [_tidb_rowid](/tidb-rowid.md)
                 -   [SHARD_ROW_ID_BITS](/shard-row-id-bits.md)
             -   [文字通りの値](/literal-values.md)

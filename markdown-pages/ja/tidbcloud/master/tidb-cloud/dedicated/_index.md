@@ -68,7 +68,7 @@ summary: TiDB Cloudは、TiDBの優れた機能すべてをクラウドに提供
 
 [Amazon RDS for Oracleから](https://docs.pingcap.com/tidbcloud/migrate-from-oracle-using-aws-dms)
 
-[TiDBセルフマネージドから](https://docs.pingcap.com/tidbcloud/migrate-from-op-tidb)
+[TiDB Self-Managedから](https://docs.pingcap.com/tidbcloud/migrate-from-op-tidb)
 
 [CSVファイルから](https://docs.pingcap.com/tidbcloud/import-csv-files)
 
@@ -126,15 +126,15 @@ summary: TiDB Cloudは、TiDBの優れた機能すべてをクラウドに提供
 
 <LearningPath label="Integrations" icon="cloud4">
 
-[エアバイト](https://docs.pingcap.com/tidbcloud/integrate-tidbcloud-with-airbyte)
+[Airbyte](https://docs.pingcap.com/tidbcloud/integrate-tidbcloud-with-airbyte)
 
-[データドッグ](https://docs.pingcap.com/tidbcloud/monitor-datadog-integration)
+[Datadog](https://docs.pingcap.com/tidbcloud/monitor-datadog-integration)
 
-[ザピエール](https://docs.pingcap.com/tidbcloud/integrate-tidbcloud-with-zapier)
+[Zapier](https://docs.pingcap.com/tidbcloud/integrate-tidbcloud-with-zapier)
 
-[ヴェルセル](https://docs.pingcap.com/tidbcloud/integrate-tidbcloud-with-vercel)
+[Vercel](https://docs.pingcap.com/tidbcloud/integrate-tidbcloud-with-vercel)
 
-[テラフォーム](https://docs.pingcap.com/tidbcloud/terraform-tidbcloud-provider-overview)
+[Terraform](https://docs.pingcap.com/tidbcloud/terraform-tidbcloud-provider-overview)
 
 [Amazon AppFlow](https://docs.pingcap.com/tidbcloud/dev-guide-aws-appflow-integration)
 

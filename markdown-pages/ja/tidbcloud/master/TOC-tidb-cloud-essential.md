@@ -25,7 +25,7 @@
     -   [高可用性](/tidb-cloud/serverless-high-availability.md)
     -   [監視](/tidb-cloud/monitoring-concepts.md)
     -   [バックアップと復元](/tidb-cloud/backup-and-restore-concepts.md)
-    -   [Security](/tidb-cloud/security-concepts.md)
+    -   [セキュリティ](/tidb-cloud/security-concepts.md)
 
 ## ガイド {#guides}
 
@@ -125,7 +125,7 @@
     -   TiDB Cloudへのデータ移行
         -   [データ移行を使用して既存データと増分データを移行する](/tidb-cloud/migrate-from-mysql-using-data-migration.md)
         -   [データ移行を使用して増分データを移行する](/tidb-cloud/migrate-incremental-data-from-mysql-using-data-migration.md)
-        -   [TiDBセルフマネージドからTiDB Cloudへの移行](/tidb-cloud/migrate-from-op-tidb.md)
+        -   [TiDB Self-ManagedからTiDB Cloudへの移行](/tidb-cloud/migrate-from-op-tidb.md)
         -   [大規模データセットのMySQLシャードを移行およびマージする](/tidb-cloud/migrate-sql-shards.md)
         -   [AWS DMSを使用してAmazon RDS for Oracleから移行する](/tidb-cloud/migrate-from-oracle-using-aws-dms.md)
     -   TiDB Cloudにデータをインポートする
@@ -145,8 +145,8 @@
     -   [変更フィードの概要](/tidb-cloud/essential-changefeed-overview.md)
     -   [MySQLへのシンク](/tidb-cloud/essential-changefeed-sink-to-mysql.md)
     -   [Apache Kafkaへのシンク](/tidb-cloud/essential-changefeed-sink-to-kafka.md)
--   Security
-    -   [Security概要](/tidb-cloud/security-overview.md)
+-   セキュリティ
+    -   [セキュリティ概要](/tidb-cloud/security-overview.md)
     -   IDアクセス制御
         -   [パスワード認証](/tidb-cloud/tidb-cloud-password-authentication.md)
         -   [標準SSO認証](/tidb-cloud/tidb-cloud-sso-authentication.md)
@@ -179,14 +179,14 @@
     -   [クラウドプロバイダーマーケットプレイスからの請求](/tidb-cloud/tidb-cloud-billing.md#billing-from-cloud-provider-marketplace)
     -   [予算管理](/tidb-cloud/tidb-cloud-budget.md)
 -   統合
-    -   [エアバイト](/tidb-cloud/integrate-tidbcloud-with-airbyte.md)
-    -   [クラウドフレア](/tidb-cloud/integrate-tidbcloud-with-cloudflare.md)
+    -   [Airbyte](/tidb-cloud/integrate-tidbcloud-with-airbyte.md)
+    -   [Cloudflare](/tidb-cloud/integrate-tidbcloud-with-cloudflare.md)
     -   [dbt](/tidb-cloud/integrate-tidbcloud-with-dbt.md)
     -   [Gitpod](/develop/dev-guide-playground-gitpod.md)
     -   [n8n](/tidb-cloud/integrate-tidbcloud-with-n8n.md)
     -   [Netlify](/tidb-cloud/integrate-tidbcloud-with-netlify.md)
     -   [ProxySQL](/develop/dev-guide-proxysql-integration.md)
-    -   テラフォーム
+    -   Terraform
         -   [Terraform統合の概要](/tidb-cloud/terraform-tidbcloud-provider-overview.md)
         -   [TiDB Cloud Terraform プロバイダーを取得する](/tidb-cloud/terraform-get-tidbcloud-provider.md)
         -   [`tidbcloud_serverless_cluster`リソースを使用する](/tidb-cloud/terraform-use-serverless-cluster-resource-manage-essential.md)
@@ -195,8 +195,8 @@
         -   [`tidbcloud_sql_user`リソースを使用する](/tidb-cloud/terraform-use-sql-user-resource.md)
         -   [`tidbcloud_import`リソースを使用する](/tidb-cloud/terraform-use-import-resource.md)
         -   [クラスタリソースの移行](/tidb-cloud/terraform-migrate-cluster-resource.md)
-    -   [ヴェルセル](/tidb-cloud/integrate-tidbcloud-with-vercel.md)
-    -   [ザピアー](/tidb-cloud/integrate-tidbcloud-with-zapier.md)
+    -   [Vercel](/tidb-cloud/integrate-tidbcloud-with-vercel.md)
+    -   [Zapier](/tidb-cloud/integrate-tidbcloud-with-zapier.md)
 
 ## 参照 {#reference}
 
@@ -204,8 +204,8 @@
     -   [TiDBでSQLを探求しよう](/basic-sql-operations.md)
     -   SQL言語の構造と構文
         -   属性
-            -   [自動インクリメント](/auto-increment.md)
-            -   [自動乱数](/auto-random.md)
+            -   [AUTO_INCREMENT](/auto-increment.md)
+            -   [AUTO_RANDOM](/auto-random.md)
             -   [_tidb_rowid](/tidb-rowid.md)
             -   [SHARD_ROW_ID_BITS](/shard-row-id-bits.md)
         -   [文字通りの値](/literal-values.md)
@@ -557,19 +557,19 @@
     -   [通知](/tidb-cloud/notifications.md)
     -   [TiDB Cloud StarterおよびEssential向けプロジェクトAPI移行ガイド](/tidb-cloud/tidbx-starter-essential-project-api-migration-guide.md)
 -   サポートプラン
-    -   [コネクテッドケアの概要](/tidb-cloud/connected-care-overview.md)
-    -   [コネクテッドケアの詳細](/tidb-cloud/connected-care-detail.md)
-    -   コネクテッドケアサポートサービスの特長
-        -   [接続済み：インスタントメッセージングにおけるAIチャット](/tidb-cloud/connected-ai-chat-in-im.md)
-        -   接続済み： TiDB CloudアラートのIMサブスクリプション
+    -   [Connected Careの概要](/tidb-cloud/connected-care-overview.md)
+    -   [Connected Careの詳細](/tidb-cloud/connected-care-detail.md)
+    -   Connected Careサポートサービスの特長
+        -   [Connected: IMでのAIチャット](/tidb-cloud/connected-ai-chat-in-im.md)
+        -   Connected: TiDB CloudアラートのIMサブスクリプション
             -   [Slack経由で購読する](/tidb-cloud/monitor-alert-slack.md)
             -   [Zoom経由で登録する](/tidb-cloud/monitor-alert-zoom.md)
             -   [Flashduty経由で購読する](/tidb-cloud/monitor-alert-flashduty.md)
             -   [PagerDuty経由で購読する](/tidb-cloud/monitor-alert-pagerduty.md)
-        -   接続済み：IMチケットの作成と更新のサブスクリプション
+        -   Connected: IMチケットの作成と更新のサブスクリプション
             -   [Slack経由でチケットを作成し、チケットの更新情報を購読する](/tidb-cloud/connected-slack-ticket-creation.md)
             -   [Lark経由でチケットを作成し、チケットの最新情報を購読する](/tidb-cloud/connected-lark-ticket-creation.md)
-        -   接続済み：サポートチケットのためのインスタントメッセージングによるやり取り
+        -   Connected: サポートチケットのためのIMインタラクション
             -   [Slack経由でサポートチケットを操作する](/tidb-cloud/connected-slack-ticket-interaction.md)
             -   [Lark経由でサポートチケットを操作する](/tidb-cloud/connected-lark-ticket-interaction.md)
     -   [サポートを受ける](/tidb-cloud/tidb-cloud-support.md)
