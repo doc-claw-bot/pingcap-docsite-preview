@@ -169,7 +169,7 @@
     -   [モニタリングAPI](/tidb-monitoring-api.md)
     -   [監視サービスをデプロイ](/deploy-monitoring-services.md)
     -   [監視サービスのアップグレード](/upgrade-monitoring-services.md)
-    -   TiDBダッシュボード
+    -   TiDB Dashboard
         -   [概要](/dashboard/dashboard-intro.md)
         -   管理
             -   [デプロイ](/dashboard/dashboard-ops-deploy.md)
@@ -180,7 +180,7 @@
         -   [概要ページ](/dashboard/dashboard-overview.md)
         -   [クラスタ情報ページ](/dashboard/dashboard-cluster-info.md)
         -   [Top SQLページ](/dashboard/top-sql.md)
-        -   [キービジュアライザーページ](/dashboard/dashboard-key-visualizer.md)
+        -   [Key Visualizerページ](/dashboard/dashboard-key-visualizer.md)
         -   [指標関係グラフ](/dashboard/dashboard-metrics-relation.md)
         -   SQLステートメントの分析
             -   [SQLステートメントページ](/dashboard/dashboard-statement-list.md)
@@ -211,9 +211,9 @@
         -   [TiDBクラスタ設定のトラブルシューティング](/troubleshoot-tidb-cluster.md)
         -   [TiFlashのトラブルシューティング](/tiflash/troubleshoot-tiflash.md)
     -   問題シナリオ
-        -   遅いクエリ
-            -   [遅いクエリを特定する](/identify-slow-queries.md)
-            -   [遅いクエリを分析する](/analyze-slow-queries.md)
+        -   スロークエリ
+            -   [スロークエリを特定する](/identify-slow-queries.md)
+            -   [スロークエリを分析する](/analyze-slow-queries.md)
         -   [TiDB メモリ不足](/troubleshoot-tidb-oom.md)
         -   [ホットスポット](/troubleshoot-hot-spot-issues.md)
         -   [読み書きレイテンシの増加](/troubleshoot-cpu-issues.md)
@@ -223,7 +223,7 @@
         -   [データとインデックス間の不整合](/troubleshoot-data-inconsistency-errors.md)
     -   診断方法
         -   [SQL診断](/information-schema/information-schema-sql-diagnostics.md)
-        -   [明細書概要表](/statement-summary-tables.md)
+        -   [ステートメントサマリーテーブル](/statement-summary-tables.md)
         -   [Top SQLを使用して高コストなクエリを特定する](/dashboard/top-sql.md)
         -   [ログを使用して高負荷なクエリを特定する](/identify-expensive-queries.md)
         -   [クラスタのオンサイト情報を保存および復元する](/sql-plan-replayer.md)
@@ -250,7 +250,7 @@
         -   [チューニングリージョンのパフォーマンス](/tune-region-performance.md)
         -   [TiFlashのパフォーマンスをチューニング](/tiflash/tune-tiflash-performance.md)
         -   [コプロセッサーキャッシュ](/coprocessor-cache.md)
-        -   ごみ収集（GC）
+        -   ガベージコレクション（GC）
             -   [概要](/garbage-collection-overview.md)
             -   [コンフィグレーション](/garbage-collection-configuration.md)
     -   SQLチューニング
@@ -288,8 +288,8 @@
                 -   [クエリの最適化](/agg-distinct-optimization.md)
                 -   [コストモデル](/cost-model.md)
                 -   [ランタイムフィルタ](/runtime-filter.md)
-            -   [準備済み実行プランキャッシュ](/sql-prepared-plan-cache.md)
-            -   [未準備実行プランキャッシュ](/sql-non-prepared-plan-cache.md)
+            -   [プリペアド実行プランキャッシュ](/sql-prepared-plan-cache.md)
+            -   [非プリペアド実行プランキャッシュ](/sql-non-prepared-plan-cache.md)
         -   実行計画の制御
             -   [概要](/control-execution-plan.md)
             -   [オプティマイザのヒント](/optimizer-hints.md)
@@ -418,8 +418,8 @@
             -   [tiup-mirror](/tiup/tiup-mirror.md)
             -   [tiup-bench](/tiup/tiup-bench.md)
     -   [TiDB Operator](/tidb-operator-overview.md)
-    -   TiDBデータ移行
-        -   [TiDBデータ移行について](/dm/dm-overview.md)
+    -   TiDB Data Migration
+        -   [TiDB Data Migrationについて](/dm/dm-overview.md)
         -   [アーキテクチャ](/dm/dm-arch.md)
         -   [クイックスタート](/dm/quick-start-with-dm.md)
         -   [ベストプラクティス](/dm/dm-best-practices.md)
@@ -640,7 +640,7 @@
                 -   [AUTO_RANDOM](/auto-random.md)
                 -   [_tidb_rowid](/tidb-rowid.md)
                 -   [SHARD_ROW_ID_BITS](/shard-row-id-bits.md)
-            -   [文字通りの値](/literal-values.md)
+            -   [リテラル値](/literal-values.md)
             -   [スキーマオブジェクト名](/schema-object-names.md)
             -   [キーワードと予約語](/keywords.md)
             -   [ユーザー定義変数](/user-defined-variables.md)
@@ -868,10 +868,10 @@
         -   [キャッシュされたテーブル](/cached-tables.md)
         -   [外部キー制約](/foreign-key.md)
         -   [テーブルレベルのデータ親和性](/table-affinity.md)
-        -   文字セットと照合
+        -   文字セットと照合順序
             -   [概要](/character-set-and-collation.md)
             -   [GBK](/character-set-gbk.md)
-        -   [TTL（Time to Live：生きる時間）](/time-to-live.md)
+        -   [TTL（Time to Live：存続時間）](/time-to-live.md)
         -   [SQLにおける配置ルール](/placement-rules-in-sql.md)
         -   システムテーブル
             -   `mysql`スキーマ
