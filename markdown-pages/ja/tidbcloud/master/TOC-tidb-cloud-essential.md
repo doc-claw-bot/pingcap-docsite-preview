@@ -53,7 +53,7 @@
   - 監視と警告
     - [概要](/tidb-cloud/monitor-tidb-cluster.md)
     - [組み込みの指標](/tidb-cloud/built-in-monitoring.md)
-    - [トップRU](/tidb-cloud/top-ru.md)
+    - [Top RU](/tidb-cloud/top-ru.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
     - [内蔵アラート機能](/tidb-cloud/monitor-built-in-alerting.md)
     - [TiDB CloudをPrometheusおよびGrafanaと統合する](/tidb-cloud/prometheus-grafana-integration.md)
     - アラート通知を購読する
@@ -137,7 +137,7 @@
     - [データインポートのためのCSV設定](/tidb-cloud/csv-config-for-import-data.md)
     - [Amazon S3からのデータインポート中に発生するアクセス拒否エラーのトラブルシューティング](/tidb-cloud/troubleshoot-import-access-denied-error.md)
     - [AWS DMSをTiDB Cloudに接続する](/tidb-cloud/tidb-cloud-connect-aws-dms.md)
-- ストリームデータ![BETA](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
+- ストリームデータ ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
   - [変更フィードの概要](/tidb-cloud/essential-changefeed-overview.md)
   - [MySQLへのシンク](/tidb-cloud/essential-changefeed-sink-to-mysql.md)
   - [Apache Kafkaへのシンク](/tidb-cloud/essential-changefeed-sink-to-kafka.md)
@@ -457,7 +457,7 @@
       - [`schema_unused_indexes`](/sys-schema/sys-schema-unused-indexes.md)
   - [メタデータロック](/metadata-lock.md)
   - [TiDB高速テーブル作成](/accelerated-table-creation.md)
-- CLIリファレンス![BETA](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
+- CLI リファレンス ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
   - [概要](/tidb-cloud/cli-reference.md)
   - 認証
     - [ログイン](/tidb-cloud/ticloud-auth-login.md)

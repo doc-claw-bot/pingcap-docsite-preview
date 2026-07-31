@@ -20,7 +20,7 @@
   - [トランザクション](/tidb-cloud/transaction-concepts.md)
   - [SQL](/tidb-cloud/sql-concepts.md)
   - [AI機能](/tidb-cloud/ai-feature-concepts.md)
-  - [データサービス](/tidb-cloud/data-service-concepts.md) ![BETA](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
+  - [データサービス](/tidb-cloud/data-service-concepts.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
   - [拡張性](/tidb-cloud/scalability-concepts.md)
   - [高可用性](/tidb-cloud/high-availability-with-multi-az.md)
   - [監視](/tidb-cloud/monitoring-concepts.md)
@@ -166,9 +166,9 @@
     - [データ移行に関する事前チェックエラー、移行エラー、およびアラート](/tidb-cloud/tidb-cloud-dm-precheck-and-troubleshooting.md)
     - [AWS DMSをTiDB Cloudに接続する](/tidb-cloud/tidb-cloud-connect-aws-dms.md)
 - データ探索
-  - [SQLエディタでのChat2Query](/tidb-cloud/explore-data-with-chat2query.md) ![BETA](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
+  - [SQLエディタでのChat2Query](/tidb-cloud/explore-data-with-chat2query.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
   - [SQLプロキシアカウント](/tidb-cloud/sql-proxy-account.md)
-- データサービス![BETA](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
+- Data Service ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
   - [概要](/tidb-cloud/data-service-overview.md)
   - [さあ始めましょう](/tidb-cloud/data-service-get-started.md)
   - Chat2Query API
@@ -218,7 +218,7 @@
   - データベースアクセス制御
     - [クラスタパスワード設定の構成](/tidb-cloud/configure-security-settings.md)
   - 監査管理
-    - [TiDB Cloud Dedicatedデータベース監査ログ](/tidb-cloud/tidb-cloud-auditing.md)
+    - [データベース監査ログ](/tidb-cloud/tidb-cloud-auditing.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
     - [コンソール監査ログ](/tidb-cloud/tidb-cloud-console-auditing.md)
 - 請求する
   - [請求書](/tidb-cloud/tidb-cloud-billing.md#invoices)
@@ -619,7 +619,7 @@
   - [Connected Careの概要](/tidb-cloud/connected-care-overview.md)
   - [Connected Careの詳細](/tidb-cloud/connected-care-detail.md)
   - Connected Careサポートサービスの特長
-    - [接続済み: Clinic Service](/tidb-cloud/tidb-cloud-clinic.md)
+    - [Connected: Clinic Service](/tidb-cloud/tidb-cloud-clinic.md)
     - [Connected: IMでのAIチャット](/tidb-cloud/connected-ai-chat-in-im.md)
     - Connected: TiDB CloudアラートのIMサブスクリプション
       - [Slack経由で購読する](/tidb-cloud/monitor-alert-slack.md)
@@ -640,3 +640,4 @@
 ## _BUILD_ALLOWLIST
 
 - [データベースのユーザーと役割を管理する](/tidb-cloud/configure-sql-users.md)
+- [データベース監査ログ（レガシー）](/tidb-cloud/tidb-cloud-auditing-legacy.md)

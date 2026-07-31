@@ -7,7 +7,8 @@
 
 - Why TiDB Cloud
   - [Introduction](/tidb-cloud/tidb-cloud-intro.md)
-  - [Features](/tidb-cloud/features.md)
+  - [BYOC Features](/tidb-cloud/byoc/byoc-features.md)
+  - [Cloud Plan Features](/tidb-cloud/features.md)
   - [MySQL Compatibility](/mysql-compatibility.md)
 - Get Started
   - [Try Out TiDB Cloud](/tidb-cloud/tidb-cloud-quickstart.md)
@@ -32,21 +33,21 @@
 - Deploy BYOC
   - [Onboarding Overview](/tidb-cloud/byoc/byoc-onboarding-overview.md)
   - [Prepare AWS Environment](/tidb-cloud/byoc/byoc-prepare-environment-aws.md)
-  - [Configure IAM Permissions](/tidb-cloud/byoc/byoc-iam-configuration.md)
+  - [Configure IAM Permissions](/tidb-cloud/byoc/byoc-configure-iam-permissions.md)
   - [Automated Deployment](/tidb-cloud/byoc/byoc-automated-deployment.md)
-  - [Service Initialization](/tidb-cloud/byoc/byoc-service-initialization.md)
+  - [Initialize Service](/tidb-cloud/byoc/byoc-initialize-service.md)
+  - [Configure a Bastion Host](/tidb-cloud/byoc/byoc-configure-bastion-host.md)
   - [Joint Validation](/tidb-cloud/byoc/joint-validation.md)
   - [Security Hardening](/tidb-cloud/byoc/security-hardening.md)
   - [Multi-Region Deployment](/tidb-cloud/byoc/multi-region-deployment.md)
 - Manage Instances
-  - [Create a TiDB Cloud Premium Instance](/tidb-cloud/premium/create-tidb-instance-premium.md)
-  - Connect to Your TiDB Cloud Premium Instance
+  - [Create a TiDB Cloud BYOC Instance](/tidb-cloud/byoc/create-tidb-instance-byoc.md)
+  - Connect to Your TiDB Cloud BYOC Instance
     - [Connection Overview](/tidb-cloud/premium/connect-to-tidb-instance.md)
     - [Connect via Public Endpoint](/tidb-cloud/premium/connect-to-premium-via-public-connection.md)
     - [Connect via Private Endpoint with AWS](/tidb-cloud/premium/connect-to-premium-via-aws-private-endpoint.md)
-    - [Connect via Private Endpoint with Alibaba Cloud](/tidb-cloud/premium/connect-to-premium-via-alibaba-cloud-private-endpoint.md)
   - [Back Up and Restore TiDB Cloud Data](/tidb-cloud/premium/backup-and-restore-premium.md)
-  - [Export Data from TiDB Cloud Premium](/tidb-cloud/premium/premium-export.md)
+  - [Export Data from TiDB Cloud BYOC](/tidb-cloud/premium/premium-export.md)
   - Use TiFlash for HTAP
     - [TiFlash Overview](/tiflash/tiflash-overview.md)
     - [Create TiFlash Replicas](/tiflash/create-tiflash-replicas.md)
@@ -61,9 +62,7 @@
   - Monitor and Alert
     - [Overview](/tidb-cloud/monitor-tidb-cluster.md)
     - [Built-in Metrics](/tidb-cloud/premium/built-in-monitoring-premium.md)
-    - [Top RU](/tidb-cloud/top-ru.md)
     - [Built-in Alerting](/tidb-cloud/monitor-built-in-alerting.md)
-    - [Integrate TiDB Cloud with Prometheus and Grafana](/tidb-cloud/prometheus-grafana-integration.md)
     - Subscribe to Alert Notifications
       - [Subscribe via Email](/tidb-cloud/monitor-alert-email.md)
       - [Subscribe via Slack](/tidb-cloud/monitor-alert-slack.md)
@@ -160,7 +159,6 @@
     - [Connect via Private Endpoint with Alibaba Cloud](/tidb-cloud/premium/connect-to-premium-via-alibaba-cloud-private-endpoint.md)
     - [TLS Connections to TiDB Cloud](/tidb-cloud/premium/tidb-cloud-tls-connect-to-premium.md)
   - Data Access Control
-    - [Dual-Layer Data Encryption](/tidb-cloud/premium/dual-layer-data-encryption-premium.md)
     - [User-Controlled Log Redaction](/tidb-cloud/tidb-cloud-log-redaction.md)
   - Audit Management
     - [Database Audit Logging](/tidb-cloud/premium/tidb-cloud-auditing-premium.md)

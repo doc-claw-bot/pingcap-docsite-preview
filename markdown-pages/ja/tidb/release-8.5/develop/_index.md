@@ -10,7 +10,7 @@ aliases: ['/ja/tidb/stable/dev-guide-overview/','/ja/tidb/dev/dev-guide-overview
 
 このガイドは、アプリケーション開発者が TiDB への接続、データベースの設計、データの書き込みとクエリ、TiDB 上での信頼性の高い高パフォーマンスのアプリケーションの構築方法を迅速に習得するのに役立ちます。
 
-> **注記：**
+> **Note:**
 >
 > このガイドはアプリケーション開発者向けに書かれていますが、TiDB の内部動作に興味がある場合や、TiDB 開発に参加したい場合は、TiDB の詳細情報については[TiDB カーネル開発ガイド](https://pingcap.github.io/tidb-dev-guide/)をお読みください。
 
@@ -19,7 +19,7 @@ aliases: ['/ja/tidb/stable/dev-guide-overview/','/ja/tidb/dev/dev-guide-overview
 サンプル コード付きのガイドに従って、使用する言語でアプリケーションを構築します。
 
 <DevLangAccordion label="JavaScript" defaultExpanded>
-<DevToolCard title="Serverless Driver (beta)" logo="tidb" docLink="/developer/serverless-driver" githubLink="https://github.com/tidbcloud/serverless-js">
+<DevToolCard title="Serverless Driver (PREVIEW)" logo="tidb" docLink="/developer/serverless-driver" githubLink="https://github.com/tidbcloud/serverless-js">
 
 エッジ環境から HTTPS 経由で TiDB に接続します ( TiDB Cloudにのみ適用されます)。
 
@@ -147,7 +147,7 @@ mysql2 ドライバーを使用して TiDB に接続します。
 
 ## MySQLクライアントソフトウェアを使用する {#use-mysql-client-software}
 
-TiDBはMySQL互換データベースであるため、多くの使い慣れたクライアントソフトウェアツールを使用してTiDBに接続し、データベースを管理できます。TiDB Cloudでは、 [コマンドラインツール](/tidb-cloud/get-started-with-cli.md)使用してデータベースに接続および管理することもできます。
+TiDBはMySQL互換データベースであるため、多くの使い慣れたクライアントソフトウェアツールを使用してTiDBに接続し、データベースを管理できます。TiDB Cloudでは、 [コマンドラインツール](/tidb-cloud/get-started-with-cli.md)を使用してデータベースに接続および管理することもできます。
 
 <DevToolGroup>
 <DevToolCard title="MySQL Workbench" logo="mysql-1" docLink="/developer/dev-guide-gui-mysql-workbench">
