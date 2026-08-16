@@ -8,7 +8,7 @@
 - [Pythonで始める](/ai/quickstart-via-python.md)
 - [SQL経由で開始する](/ai/quickstart-via-sql.md)
 
-## コンセプト
+## 概念
 
 - [ベクトル検索](/ai/concepts/vector-search-overview.md)
 
@@ -59,7 +59,6 @@
   - [NVIDIA NIM](/ai/integrations/vector-search-auto-embedding-nvidia-nim.md)
   - [Amazon Titan](/ai/integrations/vector-search-auto-embedding-amazon-titan.md)
 - AIフレームワーク
-  - [LangChain](/ai/integrations/vector-search-integrate-with-langchain.md)
   - [LlamaIndex](/ai/integrations/vector-search-integrate-with-llamaindex.md)
 - ORMライブラリ
   - [SQLAlchemy](/ai/integrations/vector-search-integrate-with-sqlalchemy.md)

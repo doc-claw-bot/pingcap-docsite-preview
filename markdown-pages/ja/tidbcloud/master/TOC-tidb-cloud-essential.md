@@ -60,6 +60,10 @@
       - [メールで購読する](/tidb-cloud/monitor-alert-email.md)
       - [Slack経由で購読する](/tidb-cloud/monitor-alert-slack.md)
       - [Zoom経由で登録する](/tidb-cloud/monitor-alert-zoom.md)
+      - [Flashduty経由で購読する](/tidb-cloud/monitor-alert-flashduty.md)
+      - [PagerDuty経由で購読する](/tidb-cloud/monitor-alert-pagerduty.md)
+      - [Webhook経由で購読する](/tidb-cloud/monitor-alert-webhook.md)
+      - [Lark経由で購読する](/tidb-cloud/monitor-alert-lark.md)
     - [イベント](/tidb-cloud/tidb-cloud-events.md)
     - [TiDB CloudをDatadogと統合する](/tidb-cloud/monitor-datadog-integration-for-tidb-x.md)
   - チューニングパフォーマンス
@@ -67,7 +71,7 @@
     - [パフォーマンスを分析する](/tidb-cloud/tune-performance.md)
     - SQLチューニング
       - [概要](/tidb-cloud/tidb-cloud-sql-tuning-overview.md)
-      - クエリ実行プランの理解
+      - クエリ実行計画の理解
         - [概要](/explain-overview.md)
         - [`EXPLAIN`ウォークスルー](/explain-walkthrough.md)
         - [索引](/explain-indexes.md)
@@ -87,7 +91,7 @@
           - [相関サブクエリのデコヒーレンス](/correlated-subquery-optimization.md)
           - [最大値/最小値を削除する](/max-min-eliminate.md)
           - [Predicate Push Down](/predicate-push-down.md)
-          - [パーティション剪定](/partition-pruning.md)
+          - [パーティションプルーニング](/partition-pruning.md)
           - [トップNとリミットプッシュダウン](/topn-limit-push-down.md)
           - [結合したテーブルの再配置](/join-reorder.md)
           - [ウィンドウ関数からTopNまたはLimitを導出する](/derive-topn-from-window.md)
@@ -165,7 +169,7 @@
   - 監査管理
     - [コンソール監査ログ](/tidb-cloud/tidb-cloud-console-auditing.md)
     - [データベース監査ログ](/tidb-cloud/essential-database-audit-logging.md)
-- 請求する
+- 請求
   - [請求書](/tidb-cloud/tidb-cloud-billing.md#invoices)
   - [請求明細](/tidb-cloud/tidb-cloud-billing.md#billing-details)
   - [コストエクスプローラー](/tidb-cloud/tidb-cloud-billing.md#cost-explorer)
@@ -274,8 +278,8 @@
     - [`FLUSH PRIVILEGES`](/sql-statements/sql-statement-flush-privileges.md)
     - [`FLUSH STATUS`](/sql-statements/sql-statement-flush-status.md)
     - [`FLUSH TABLES`](/sql-statements/sql-statement-flush-tables.md)
-    - [`GRANT &#x3C;privileges>`](/sql-statements/sql-statement-grant-privileges.md)
-    - [`GRANT &#x3C;role>`](/sql-statements/sql-statement-grant-role.md)
+    - [`GRANT <privileges>`](/sql-statements/sql-statement-grant-privileges.md)
+    - [`GRANT <role>`](/sql-statements/sql-statement-grant-role.md)
     - [`IMPORT INTO`](/sql-statements/sql-statement-import-into.md)
     - [`INSERT`](/sql-statements/sql-statement-insert.md)
     - [`KILL [TIDB]`](/sql-statements/sql-statement-kill.md)
@@ -287,8 +291,8 @@
     - [`RENAME TABLE`](/sql-statements/sql-statement-rename-table.md)
     - [`RENAME USER`](/sql-statements/sql-statement-rename-user.md)
     - [`REPLACE`](/sql-statements/sql-statement-replace.md)
-    - [`REVOKE &#x3C;privileges>`](/sql-statements/sql-statement-revoke-privileges.md)
-    - [`REVOKE &#x3C;role>`](/sql-statements/sql-statement-revoke-role.md)
+    - [`REVOKE <privileges>`](/sql-statements/sql-statement-revoke-privileges.md)
+    - [`REVOKE <role>`](/sql-statements/sql-statement-revoke-role.md)
     - [`ROLLBACK`](/sql-statements/sql-statement-rollback.md)
     - [`SAVEPOINT`](/sql-statements/sql-statement-savepoint.md)
     - [`SELECT`](/sql-statements/sql-statement-select.md)
@@ -297,7 +301,7 @@
     - [`SET PASSWORD`](/sql-statements/sql-statement-set-password.md)
     - [`SET ROLE`](/sql-statements/sql-statement-set-role.md)
     - [`SET TRANSACTION`](/sql-statements/sql-statement-set-transaction.md)
-    - [`SET [GLOBAL|SESSION] &#x3C;variable>`](/sql-statements/sql-statement-set-variable.md)
+    - [`SET [GLOBAL|SESSION] <variable>`](/sql-statements/sql-statement-set-variable.md)
     - [`SHOW ANALYZE STATUS`](/sql-statements/sql-statement-show-analyze-status.md)
     - [`SHOW [GLOBAL|SESSION] BINDINGS`](/sql-statements/sql-statement-show-bindings.md)
     - [`SHOW BUILTINS`](/sql-statements/sql-statement-show-builtins.md)
@@ -381,7 +385,7 @@
   - [クラスター化インデックス](/clustered-indexes.md)
   - [グローバルインデックス](/global-indexes.md)
   - [制約](/constraints.md)
-  - [生成された列](/generated-columns.md)
+  - [生成列](/generated-columns.md)
   - [SQLモード](/sql-mode.md)
   - [テーブル属性](/table-attributes.md)
   - トランザクション
@@ -564,6 +568,8 @@
       - [Zoom経由で登録する](/tidb-cloud/monitor-alert-zoom.md)
       - [Flashduty経由で購読する](/tidb-cloud/monitor-alert-flashduty.md)
       - [PagerDuty経由で購読する](/tidb-cloud/monitor-alert-pagerduty.md)
+      - [Webhook経由で購読する](/tidb-cloud/monitor-alert-webhook.md)
+      - [Lark経由で購読する](/tidb-cloud/monitor-alert-lark.md)
     - Connected: IMチケットの作成と更新のサブスクリプション
       - [Slack経由でチケットを作成し、チケットの更新情報を購読する](/tidb-cloud/connected-slack-ticket-creation.md)
       - [Lark経由でチケットを作成し、チケットの最新情報を購読する](/tidb-cloud/connected-lark-ticket-creation.md)

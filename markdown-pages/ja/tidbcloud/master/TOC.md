@@ -20,7 +20,7 @@
   - [トランザクション](/tidb-cloud/transaction-concepts.md)
   - [SQL](/tidb-cloud/sql-concepts.md)
   - [AI機能](/tidb-cloud/ai-feature-concepts.md)
-  - [データサービス](/tidb-cloud/data-service-concepts.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
+  - [Data Service](/tidb-cloud/data-service-concepts.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
   - [拡張性](/tidb-cloud/scalability-concepts.md)
   - [高可用性](/tidb-cloud/high-availability-with-multi-az.md)
   - [監視](/tidb-cloud/monitoring-concepts.md)
@@ -68,6 +68,10 @@
       - [メールで購読する](/tidb-cloud/monitor-alert-email.md)
       - [Slack経由で購読する](/tidb-cloud/monitor-alert-slack.md)
       - [Zoom経由で登録する](/tidb-cloud/monitor-alert-zoom.md)
+      - [Flashduty経由で購読する](/tidb-cloud/monitor-alert-flashduty.md)
+      - [PagerDuty経由で購読する](/tidb-cloud/monitor-alert-pagerduty.md)
+      - [Webhook経由で購読する](/tidb-cloud/monitor-alert-webhook.md)
+      - [Lark経由で購読する](/tidb-cloud/monitor-alert-lark.md)
     - [イベント](/tidb-cloud/tidb-cloud-events.md)
     - サードパーティ製指標の統合
       - [概要](/tidb-cloud/third-party-monitoring-integrations.md)
@@ -81,7 +85,7 @@
       - [使用説明書の概要表](/statement-summary-tables.md)
     - SQLチューニング
       - [概要](/tidb-cloud/tidb-cloud-sql-tuning-overview.md)
-      - クエリ実行プランの理解
+      - クエリ実行計画の理解
         - [概要](/explain-overview.md)
         - [`EXPLAIN`ウォークスルー](/explain-walkthrough.md)
         - [索引](/explain-indexes.md)
@@ -101,7 +105,7 @@
           - [相関サブクエリのデコヒーレンス](/correlated-subquery-optimization.md)
           - [最大値/最小値を削除する](/max-min-eliminate.md)
           - [Predicate Push Down](/predicate-push-down.md)
-          - [パーティション剪定](/partition-pruning.md)
+          - [パーティションプルーニング](/partition-pruning.md)
           - [トップNとリミットプッシュダウン](/topn-limit-push-down.md)
           - [結合したテーブルの再配置](/join-reorder.md)
           - [ウィンドウ関数からTopNまたはLimitを導出する](/derive-topn-from-window.md)
@@ -132,6 +136,7 @@
   - リソース割り当ての最適化
     - [リソース割り当ての概要](/tidb-cloud/optimize-resource-allocation.md)
     - リソースマネージャー
+      - [リソースの調整](/tidb-cloud/calibrate-resource.md)
       - [リソース制御を使用して、リソースグループの制限とフロー制御を実現します](/tidb-resource-control-ru-groups.md)
       - [暴走クエリの管理](/tidb-resource-control-runaway-queries.md)
       - [バックグラウンドタスクの管理](/tidb-resource-control-background-tasks.md)
@@ -220,7 +225,7 @@
   - 監査管理
     - [データベース監査ログ](/tidb-cloud/tidb-cloud-auditing.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
     - [コンソール監査ログ](/tidb-cloud/tidb-cloud-console-auditing.md)
-- 請求する
+- 請求
   - [請求書](/tidb-cloud/tidb-cloud-billing.md#invoices)
   - [請求明細](/tidb-cloud/tidb-cloud-billing.md#billing-details)
   - [コストエクスプローラー](/tidb-cloud/tidb-cloud-billing.md#cost-explorer)
@@ -349,8 +354,8 @@
     - [`FLUSH PRIVILEGES`](/sql-statements/sql-statement-flush-privileges.md)
     - [`FLUSH STATUS`](/sql-statements/sql-statement-flush-status.md)
     - [`FLUSH TABLES`](/sql-statements/sql-statement-flush-tables.md)
-    - [`GRANT &#x3C;privileges>`](/sql-statements/sql-statement-grant-privileges.md)
-    - [`GRANT &#x3C;role>`](/sql-statements/sql-statement-grant-role.md)
+    - [`GRANT <privileges>`](/sql-statements/sql-statement-grant-privileges.md)
+    - [`GRANT <role>`](/sql-statements/sql-statement-grant-role.md)
     - [`IMPORT INTO`](/sql-statements/sql-statement-import-into.md)
     - [`INSERT`](/sql-statements/sql-statement-insert.md)
     - [`KILL [TIDB]`](/sql-statements/sql-statement-kill.md)
@@ -365,8 +370,8 @@
     - [`RENAME USER`](/sql-statements/sql-statement-rename-user.md)
     - [`REPLACE`](/sql-statements/sql-statement-replace.md)
     - [`RESTORE`](/sql-statements/sql-statement-restore.md)
-    - [`REVOKE &#x3C;privileges>`](/sql-statements/sql-statement-revoke-privileges.md)
-    - [`REVOKE &#x3C;role>`](/sql-statements/sql-statement-revoke-role.md)
+    - [`REVOKE <privileges>`](/sql-statements/sql-statement-revoke-privileges.md)
+    - [`REVOKE <role>`](/sql-statements/sql-statement-revoke-role.md)
     - [`ROLLBACK`](/sql-statements/sql-statement-rollback.md)
     - [`SAVEPOINT`](/sql-statements/sql-statement-savepoint.md)
     - [`SELECT`](/sql-statements/sql-statement-select.md)
@@ -376,7 +381,7 @@
     - [`SET RESOURCE GROUP`](/sql-statements/sql-statement-set-resource-group.md)
     - [`SET ROLE`](/sql-statements/sql-statement-set-role.md)
     - [`SET TRANSACTION`](/sql-statements/sql-statement-set-transaction.md)
-    - [`SET [GLOBAL|SESSION] &#x3C;variable>`](/sql-statements/sql-statement-set-variable.md)
+    - [`SET [GLOBAL|SESSION] <variable>`](/sql-statements/sql-statement-set-variable.md)
     - [`SHOW ANALYZE STATUS`](/sql-statements/sql-statement-show-analyze-status.md)
     - [`SHOW [BACKUPS|RESTORES]`](/sql-statements/sql-statement-show-backups.md)
     - [`SHOW [GLOBAL|SESSION] BINDINGS`](/sql-statements/sql-statement-show-bindings.md)
@@ -474,7 +479,7 @@
   - [クラスター化インデックス](/clustered-indexes.md)
   - [グローバルインデックス](/global-indexes.md)
   - [制約](/constraints.md)
-  - [生成された列](/generated-columns.md)
+  - [生成列](/generated-columns.md)
   - [SQLモード](/sql-mode.md)
   - [テーブル属性](/table-attributes.md)
   - トランザクション
@@ -489,7 +494,7 @@
   - [一時テーブル](/temporary-tables.md)
   - [キャッシュされたテーブル](/cached-tables.md)
   - [外部キー制約](/foreign-key.md)
-  - 文字セットと照合
+  - 文字セットと照合順序
     - [概要](/character-set-and-collation.md)
     - [GBK](/character-set-gbk.md)
   - 履歴データを読む
@@ -626,6 +631,8 @@
       - [Zoom経由で登録する](/tidb-cloud/monitor-alert-zoom.md)
       - [Flashduty経由で購読する](/tidb-cloud/monitor-alert-flashduty.md)
       - [PagerDuty経由で購読する](/tidb-cloud/monitor-alert-pagerduty.md)
+      - [Webhook経由で購読する](/tidb-cloud/monitor-alert-webhook.md)
+      - [Lark経由で購読する](/tidb-cloud/monitor-alert-lark.md)
     - Connected: IMチケットの作成と更新のサブスクリプション
       - [Slack経由でチケットを作成し、チケットの更新情報を購読する](/tidb-cloud/connected-slack-ticket-creation.md)
       - [Lark経由でチケットを作成し、チケットの最新情報を購読する](/tidb-cloud/connected-lark-ticket-creation.md)
