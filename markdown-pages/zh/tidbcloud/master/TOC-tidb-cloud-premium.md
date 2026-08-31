@@ -53,6 +53,7 @@
     - [概览](/tidb-cloud/monitor-tidb-cluster.md)
     - [内置指标](/tidb-cloud/premium/built-in-monitoring-premium.md)
     - [Top RU](/tidb-cloud/top-ru.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
+    - [Statement Insight](/tidb-cloud/statement-insight.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
     - [内置告警](/tidb-cloud/monitor-built-in-alerting.md)
     - [将 TiDB Cloud 与 Prometheus 和 Grafana 集成](/tidb-cloud/prometheus-grafana-integration.md)
     - 订阅告警通知
@@ -139,6 +140,7 @@
   - [Changefeed 概述](/tidb-cloud/changefeed-overview.md)
   - [到 MySQL Sink](/tidb-cloud/changefeed-sink-to-mysql.md)
   - [到 Kafka Sink](/tidb-cloud/changefeed-sink-to-apache-kafka.md)
+  - [到 Cloud Storage](/tidb-cloud/changefeed-sink-to-cloud-storage.md)
   - 参考
     - [在 AWS 中设置自托管 Kafka Private Link 服务](/tidb-cloud/setup-aws-self-hosted-kafka-private-link-service.md)
     - [为 Changefeed 设置 Private Endpoint](/tidb-cloud/premium/set-up-sink-private-endpoint-premium.md)

@@ -53,6 +53,7 @@
     - [Overview](/tidb-cloud/monitor-tidb-cluster.md)
     - [Built-in Metrics](/tidb-cloud/premium/built-in-monitoring-premium.md)
     - [Top RU](/tidb-cloud/top-ru.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
+    - [Statement Insight](/tidb-cloud/statement-insight.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
     - [Built-in Alerting](/tidb-cloud/monitor-built-in-alerting.md)
     - [Integrate TiDB Cloud with Prometheus and Grafana](/tidb-cloud/prometheus-grafana-integration.md)
     - Subscribe to Alert Notifications
@@ -139,6 +140,7 @@
   - [Changefeed Overview](/tidb-cloud/changefeed-overview.md)
   - [To MySQL Sink](/tidb-cloud/changefeed-sink-to-mysql.md)
   - [To Kafka Sink](/tidb-cloud/changefeed-sink-to-apache-kafka.md)
+  - [To Cloud Storage](/tidb-cloud/changefeed-sink-to-cloud-storage.md)
   - Reference
     - [Set Up Self-Hosted Kafka Private Link Service in AWS](/tidb-cloud/setup-aws-self-hosted-kafka-private-link-service.md)
     - [Set Up Private Endpoint for Changefeeds](/tidb-cloud/premium/set-up-sink-private-endpoint-premium.md)

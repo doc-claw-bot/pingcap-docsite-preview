@@ -54,6 +54,7 @@
     - [概要](/tidb-cloud/monitor-tidb-cluster.md)
     - [組み込みの指標](/tidb-cloud/built-in-monitoring.md)
     - [Top RU](/tidb-cloud/top-ru.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
+    - [Statement Insight](/tidb-cloud/statement-insight.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
     - [内蔵アラート機能](/tidb-cloud/monitor-built-in-alerting.md)
     - [TiDB CloudをPrometheusおよびGrafanaと統合する](/tidb-cloud/prometheus-grafana-integration.md)
     - アラート通知を購読する
@@ -111,7 +112,7 @@
         - [オプティマイザのヒント](/optimizer-hints.md)
         - [SQLプラン管理](/sql-plan-management.md)
         - [最適化ルールと式プッシュダウンのブロックリスト](/blocklist-control-plan.md)
-        - [オプティマイザー修正コントロール](/optimizer-fix-controls.md)
+        - [オプティマイザ修正コントロール](/optimizer-fix-controls.md)
     - [TiKV Follower Readの調整](/follower-read.md)
     - [コプロセッサーキャッシュ](/coprocessor-cache.md)
     - ガベージコレクション（GC）
@@ -364,7 +365,7 @@
     - [キャスト関数と演算子](/functions-and-operators/cast-functions-and-operators.md)
     - [暗号化および圧縮機能](/functions-and-operators/encryption-and-compression-functions.md)
     - [ロック機能](/functions-and-operators/locking-functions.md)
-    - [情報機能](/functions-and-operators/information-functions.md)
+    - [情報関数](/functions-and-operators/information-functions.md)
     - JSON関数
       - [概要](/functions-and-operators/json-functions.md)
       - [JSONを作成する関数](/functions-and-operators/json-functions/json-functions-create.md)
@@ -413,7 +414,7 @@
     - `mysql`スキーマ
       - [概要](/mysql-schema/mysql-schema.md)
       - [`user`](/mysql-schema/mysql-schema-user.md)
-    - 情報スキーマ
+    - INFORMATION_SCHEMA
       - [概要](/information-schema/information-schema.md)
       - [`ANALYZE_STATUS`](/information-schema/information-schema-analyze-status.md)
       - [`CHECK_CONSTRAINTS`](/information-schema/information-schema-check-constraints.md)
@@ -552,7 +553,7 @@
   - [TiDB X インスタンスで制限される SQL 機能](/tidb-cloud/limited-sql-features-tidb-x.md)
   - [TiDBの制限事項](/tidb-limitations.md)
   - [システム変数](/system-variables.md)
-  - [サーバー状態変数](/status-variables.md)
+  - [サーバーステータス変数](/status-variables.md)
   - [テーブルフィルター](/table-filter.md)
   - [外部ストレージサービスのURI形式](/external-storage-uri.md)
   - [データとインデックス間の不整合のトラブルシューティング](/troubleshoot-data-inconsistency-errors.md)

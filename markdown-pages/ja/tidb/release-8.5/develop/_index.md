@@ -6,7 +6,7 @@ aliases: ['/ja/tidb/stable/dev-guide-overview/','/ja/tidb/dev/dev-guide-overview
 
 # 開発者ガイドの概要 {#developer-guide-overview}
 
-[TiDB](https://github.com/pingcap/tidb)は、ハイブリッド トランザクションおよび分析処理 (HTAP) ワークロードをサポートするオープン ソースの分散 SQL データベースです。
+[TiDB](https://github.com/pingcap/tidb)は、ハイブリッドトランザクションおよび分析処理 (HTAP) ワークロードをサポートするオープン ソースの分散 SQL データベースです。
 
 このガイドは、アプリケーション開発者が TiDB への接続、データベースの設計、データの書き込みとクエリ、TiDB 上での信頼性の高い高パフォーマンスのアプリケーションの構築方法を迅速に習得するのに役立ちます。
 
@@ -16,7 +16,7 @@ aliases: ['/ja/tidb/stable/dev-guide-overview/','/ja/tidb/dev/dev-guide-overview
 
 ## 言語とフレームワーク別のガイド {#guides-by-language-and-framework}
 
-サンプル コード付きのガイドに従って、使用する言語でアプリケーションを構築します。
+サンプルコード付きのガイドに従って、使用する言語でアプリケーションを構築します。
 
 <DevLangAccordion label="JavaScript" defaultExpanded>
 <DevToolCard title="Serverless Driver (PREVIEW)" logo="tidb" docLink="/developer/serverless-driver" githubLink="https://github.com/tidbcloud/serverless-js">
@@ -176,6 +176,6 @@ JetBrains の DataGrip を使用して TiDB データベースに接続し、管
 
 TiDB を使用した開発に関するその他のトピックを学習します。
 
--   [TiDB データベース開発リファレンス](/develop/dev-guide-schema-design-overview.md)に従って、データとスキーマを設計、操作、最適化、およびトラブルシューティングします。
--   無料のオンラインコース[TiDBの紹介](https://eng.edu.pingcap.com/catalog/info/id:203/?utm_source=docs-dev-guide)を受講してください。
--   TiDB Cloudで人気の[サービス統合](/tidb-cloud/integrate-tidbcloud-with-airbyte.md)探索します。
+- [TiDB データベース開発リファレンス](/develop/dev-guide-schema-design-overview.md)に従って、データとスキーマを設計、操作、最適化、およびトラブルシューティングします。
+- 無料のオンラインコース[TiDBの紹介](https://eng.edu.pingcap.com/catalog/info/id:203/?utm_source=docs-dev-guide)を受講してください。
+- TiDB Cloudで人気の[サービス統合](/tidb-cloud/integrate-tidbcloud-with-airbyte.md)探索します。

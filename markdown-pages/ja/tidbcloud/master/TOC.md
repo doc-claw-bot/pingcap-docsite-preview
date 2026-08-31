@@ -125,7 +125,7 @@
         - [オプティマイザのヒント](/optimizer-hints.md)
         - [SQLプラン管理](/sql-plan-management.md)
         - [最適化ルールと式プッシュダウンのブロックリスト](/blocklist-control-plan.md)
-        - [オプティマイザー修正コントロール](/optimizer-fix-controls.md)
+        - [オプティマイザ修正コントロール](/optimizer-fix-controls.md)
       - [インデックスアドバイザー](/index-advisor.md)
     - [TiKV Follower Readの調整](/follower-read.md)
     - [コプロセッサーキャッシュ](/coprocessor-cache.md)
@@ -455,7 +455,7 @@
     - [キャスト関数と演算子](/functions-and-operators/cast-functions-and-operators.md)
     - [暗号化および圧縮機能](/functions-and-operators/encryption-and-compression-functions.md)
     - [ロック機能](/functions-and-operators/locking-functions.md)
-    - [情報機能](/functions-and-operators/information-functions.md)
+    - [情報関数](/functions-and-operators/information-functions.md)
     - JSON関数
       - [概要](/functions-and-operators/json-functions.md)
       - [JSONを作成する関数](/functions-and-operators/json-functions/json-functions-create.md)
@@ -510,7 +510,7 @@
       - [概要](/mysql-schema/mysql-schema.md)
       - [`tidb_mdl_view`](/mysql-schema/mysql-schema-tidb-mdl-view.md)
       - [`user`](/mysql-schema/mysql-schema-user.md)
-    - 情報スキーマ
+    - INFORMATION_SCHEMA
       - [概要](/information-schema/information-schema.md)
       - [`ANALYZE_STATUS`](/information-schema/information-schema-analyze-status.md)
       - [`CHECK_CONSTRAINTS`](/information-schema/information-schema-check-constraints.md)
@@ -613,7 +613,7 @@
       - [TPC-C性能試験報告書](/tidb-cloud/v6.5-performance-benchmarking-with-tpcc.md)
       - [Sysbenchパフォーマンステストレポート](/tidb-cloud/v6.5-performance-benchmarking-with-sysbench.md)
   - [システム変数](/system-variables.md)
-  - [サーバー状態変数](/status-variables.md)
+  - [サーバーステータス変数](/status-variables.md)
   - [テーブルフィルター](/table-filter.md)
   - [外部ストレージサービスのURI形式](/external-storage-uri.md)
   - [DDLステートメントに埋め込まれた`ANALYZE`](/ddl_embedded_analyze.md)

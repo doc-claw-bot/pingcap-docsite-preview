@@ -27,7 +27,7 @@
     - [ハイブリッドトポロジー](/hybrid-deployment-topology.md)
   - [TiUPを使用してデプロイ](/production-deployment-using-tiup.md)
   - [Kubernetesにデプロイ](/tidb-in-kubernetes.md)
-  - [クラスタの状態を確認する](/post-installation-check.md)
+  - [クラスタのステータスを確認する](/post-installation-check.md)
   - テストクラスタのパフォーマンス
     - [Sysbenchを使用してTiDBをテストする](/benchmark/benchmark-tidb-using-sysbench.md)
     - [TPC-Cを使用してTiDBをテストする](/benchmark/benchmark-tidb-using-tpcc.md)
@@ -224,7 +224,7 @@
   - 診断方法
     - [SQL診断](/information-schema/information-schema-sql-diagnostics.md)
     - [ステートメントサマリーテーブル](/statement-summary-tables.md)
-    - [Top SQLを使用してコストの高いクエリを特定する](/dashboard/top-sql.md)
+    - [Top SQL を使用して高コストなクエリを特定する](/dashboard/top-sql.md)
     - [ログを使用して高負荷なクエリを特定する](/identify-expensive-queries.md)
     - [クラスタのオンサイト情報を保存および復元する](/sql-plan-replayer.md)
     - [TiKVにおけるステイル読み取りとsafe-tsの理解](/troubleshoot-stale-read.md)
@@ -296,12 +296,12 @@
       - [オプティマイザのヒント](/optimizer-hints.md)
       - [SQLプラン管理](/sql-plan-management.md)
       - [最適化ルールと式プッシュダウンのブロックリスト](/blocklist-control-plan.md)
-      - [オプティマイザー修正コントロール](/optimizer-fix-controls.md)
+      - [オプティマイザ修正コントロール](/optimizer-fix-controls.md)
     - [インデックスアドバイザー](/index-advisor.md)
 - チュートリアル
-  - [1つのリージョンに複数の可用性ゾーンを展開](/multi-data-centers-in-one-city-deployment.md)
-  - [2つのリージョンに3つの可用性ゾーンを展開](/three-data-centers-in-two-cities-deployment.md)
-  - [1つのリージョン展開で2つの可用性ゾーンを実現](/two-data-centers-in-one-city-deployment.md)
+  - [1つのリージョンに複数のアベイラビリティゾーンを展開](/multi-data-centers-in-one-city-deployment.md)
+  - [2つのリージョンに3つのアベイラビリティゾーンを展開](/three-data-centers-in-two-cities-deployment.md)
+  - [1つのリージョン展開で2つのアベイラビリティゾーンを実現](/two-data-centers-in-one-city-deployment.md)
   - 履歴データを読む
     - ステイル読み取りを使用する（推奨）
       - [ステイル読み取りの使用シナリオ](/stale-read.md)
@@ -454,7 +454,7 @@
         - [悲観的モード](/dm/feature-shard-merge-pessimistic.md)
         - [楽観的モード](/dm/feature-shard-merge-optimistic.md)
         - [シャーディングDDLロックを手動で処理する](/dm/manually-handling-sharding-ddl-locks.md)
-      - [GH-ost/PT-oscを使用するMySQLデータベースからの移行](/dm/feature-online-ddl.md)
+      - [gh-ost/pt-osc を使用する MySQL データベースから移行する](/dm/feature-online-ddl.md)
       - [より多くのカラムを持つダウンストリーム TiDB テーブルにデータを移行する](/migrate-with-more-columns-downstream.md)
       - [継続的なデータ検証](/dm/dm-continuous-data-validation.md)
     - 管理
@@ -601,7 +601,7 @@
     - [TiDB グローバルソート](/tidb-global-sort.md)
   - [システム変数](/system-variables.md)
   - [システム変数リファレンス](/system-variable-reference.md)
-  - [サーバー状態変数](/status-variables.md)
+  - [サーバーステータス変数](/status-variables.md)
   - コンフィグレーションファイルパラメータ
     - [tidb-server](/tidb-configuration-file.md)
     - [tikvサーバー](/tikv-configuration-file.md)
@@ -828,7 +828,7 @@
       - [キャスト関数と演算子](/functions-and-operators/cast-functions-and-operators.md)
       - [暗号化および圧縮機能](/functions-and-operators/encryption-and-compression-functions.md)
       - [ロック機能](/functions-and-operators/locking-functions.md)
-      - [情報機能](/functions-and-operators/information-functions.md)
+      - [情報関数](/functions-and-operators/information-functions.md)
       - [ベクトル関数と演算子](/ai/reference/vector-search-functions-and-operators.md)
       - JSON関数
         - [概要](/functions-and-operators/json-functions.md)
@@ -880,7 +880,7 @@
         - [概要](/mysql-schema/mysql-schema.md)
         - [`tidb_mdl_view`](/mysql-schema/mysql-schema-tidb-mdl-view.md)
         - [`user`](/mysql-schema/mysql-schema-user.md)
-      - 情報スキーマ
+      - INFORMATION_SCHEMA
         - [概要](/information-schema/information-schema.md)
         - [`ANALYZE_STATUS`](/information-schema/information-schema-analyze-status.md)
         - [`CHECK_CONSTRAINTS`](/information-schema/information-schema-check-constraints.md)
