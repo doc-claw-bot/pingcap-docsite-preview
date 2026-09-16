@@ -99,8 +99,8 @@
           - [クエリの最適化](/agg-distinct-optimization.md)
           - [コストモデル](/cost-model.md)
           - [ランタイムフィルタ](/runtime-filter.md)
-        - [プリペアドプランキャッシュ](/sql-prepared-plan-cache.md)
-        - [非プリペアドプランキャッシュ](/sql-non-prepared-plan-cache.md)
+        - [プリペアド実行プランキャッシュ](/sql-prepared-plan-cache.md)
+        - [非プリペアド実行プランキャッシュ](/sql-non-prepared-plan-cache.md)
       - 実行計画の制御
         - [概要](/control-execution-plan.md)
         - [オプティマイザのヒント](/optimizer-hints.md)
@@ -216,7 +216,7 @@
     - [ユーザー定義変数](/user-defined-variables.md)
     - [式の構文](/expression-syntax.md)
     - [コメント構文](/comment-syntax.md)
-  - SQLステートメント
+  - SQL文
     - [概要](/sql-statements/sql-statement-overview.md)
     - [`ADMIN`](/sql-statements/sql-statement-admin.md)
     - [`ADMIN CANCEL DDL`](/sql-statements/sql-statement-admin-cancel-ddl.md)
@@ -393,7 +393,7 @@
     - [隔離レベル](/transaction-isolation-levels.md)
     - [楽観的トランザクション](/optimistic-transaction.md)
     - [悲観的トランザクション](/pessimistic-transaction.md)
-    - [非トランザクションDMLステートメント](/non-transactional-dml.md)
+    - [非トランザクションDML文](/non-transactional-dml.md)
   - [ビュー](/views.md)
   - [パーティショニング](/partitioned-table.md)
   - [一時テーブル](/temporary-tables.md)

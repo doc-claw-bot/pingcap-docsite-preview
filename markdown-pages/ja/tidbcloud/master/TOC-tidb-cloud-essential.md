@@ -70,6 +70,7 @@
   - チューニングパフォーマンス
     - [概要](/tidb-cloud/tidb-cloud-tune-performance-overview.md)
     - [パフォーマンスを分析する](/tidb-cloud/tune-performance.md)
+    - [Plan Replayer を使用して SQL パフォーマンスをトラブルシューティングする](/tidb-cloud/plan-replayer.md)
     - SQLチューニング
       - [概要](/tidb-cloud/tidb-cloud-sql-tuning-overview.md)
       - クエリ実行計画の理解
@@ -217,7 +218,7 @@
     - [ユーザー定義変数](/user-defined-variables.md)
     - [式の構文](/expression-syntax.md)
     - [コメント構文](/comment-syntax.md)
-  - SQLステートメント
+  - SQL文
     - [概要](/sql-statements/sql-statement-overview.md)
     - [`ADMIN`](/sql-statements/sql-statement-admin.md)
     - [`ADMIN CANCEL DDL`](/sql-statements/sql-statement-admin-cancel-ddl.md)
@@ -394,7 +395,7 @@
     - [隔離レベル](/transaction-isolation-levels.md)
     - [楽観的トランザクション](/optimistic-transaction.md)
     - [悲観的トランザクション](/pessimistic-transaction.md)
-    - [非トランザクションDMLステートメント](/non-transactional-dml.md)
+    - [非トランザクションDML文](/non-transactional-dml.md)
   - [ビュー](/views.md)
   - [パーティショニング](/partitioned-table.md)
   - [一時テーブル](/temporary-tables.md)

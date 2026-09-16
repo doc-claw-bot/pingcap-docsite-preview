@@ -64,10 +64,12 @@
       - [PagerDuty経由で購読する](/tidb-cloud/monitor-alert-pagerduty.md)
       - [Webhook経由で購読する](/tidb-cloud/monitor-alert-webhook.md)
       - [Lark経由で購読する](/tidb-cloud/monitor-alert-lark.md)
+    - [イベント](/tidb-cloud/tidb-cloud-events.md)
     - [TiDB CloudをDatadogと統合する](/tidb-cloud/monitor-datadog-integration-for-tidb-x.md)
   - チューニングパフォーマンス
     - [概要](/tidb-cloud/tidb-cloud-tune-performance-overview.md)
     - [パフォーマンスを分析する](/tidb-cloud/tune-performance.md)
+    - [Plan Replayer を使用して SQL パフォーマンスをトラブルシューティングする](/tidb-cloud/plan-replayer.md)
     - SQLチューニング
       - [概要](/tidb-cloud/tidb-cloud-sql-tuning-overview.md)
       - クエリ実行計画の理解
@@ -103,8 +105,8 @@
           - [クエリの最適化](/agg-distinct-optimization.md)
           - [コストモデル](/cost-model.md)
           - [ランタイムフィルタ](/runtime-filter.md)
-        - [プリペアドプランキャッシュ](/sql-prepared-plan-cache.md)
-        - [非プリペアドプランキャッシュ](/sql-non-prepared-plan-cache.md)
+        - [プリペアド実行プランキャッシュ](/sql-prepared-plan-cache.md)
+        - [非プリペアド実行プランキャッシュ](/sql-non-prepared-plan-cache.md)
       - 実行計画の制御
         - [概要](/control-execution-plan.md)
         - [オプティマイザのヒント](/optimizer-hints.md)
@@ -201,7 +203,7 @@
     - [ユーザー定義変数](/user-defined-variables.md)
     - [式の構文](/expression-syntax.md)
     - [コメント構文](/comment-syntax.md)
-  - SQLステートメント
+  - SQL文
     - [概要](/sql-statements/sql-statement-overview.md)
     - [`ADMIN`](/sql-statements/sql-statement-admin.md)
     - [`ADMIN CANCEL DDL`](/sql-statements/sql-statement-admin-cancel-ddl.md)
@@ -382,7 +384,7 @@
     - [隔離レベル](/transaction-isolation-levels.md)
     - [楽観的トランザクション](/optimistic-transaction.md)
     - [悲観的トランザクション](/pessimistic-transaction.md)
-    - [非トランザクションDMLステートメント](/non-transactional-dml.md)
+    - [非トランザクションDML文](/non-transactional-dml.md)
   - [ビュー](/views.md)
   - [パーティショニング](/partitioned-table.md)
   - [一時テーブル](/temporary-tables.md)
@@ -475,7 +477,7 @@
   - [サーバーステータス変数](/status-variables.md)
   - [テーブルフィルター](/table-filter.md)
   - [外部ストレージサービスのURI形式](/external-storage-uri.md)
-  - [DDL ステートメントに埋め込まれた `ANALYZE`](/ddl_embedded_analyze.md)
+  - [DDL文に埋め込まれた `ANALYZE`](/ddl_embedded_analyze.md)
   - [データとインデックス間の不整合のトラブルシューティング](/troubleshoot-data-inconsistency-errors.md)
   - [通知](/tidb-cloud/notifications.md)
 - サポートプラン

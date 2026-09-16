@@ -36,7 +36,7 @@
   - [概要](/migration-overview.md)
   - [移行ツール](/migration-tools.md)
   - [ベストプラクティスの導入](/tidb-lightning/data-import-best-practices.md)
-  - 移住シナリオ
+  - 移行シナリオ
     - [Auroraから移行する](/migrate-aurora-to-tidb.md)
     - [MySQLから小規模データセットを移行する](/migrate-small-mysql-to-tidb.md)
     - [MySQLから大規模データセットを移行する](/migrate-large-mysql-to-tidb.md)
@@ -119,7 +119,7 @@
     - [TiDB スムーズアップグレード](/smooth-upgrade-tidb.md)
     - [TiDBクラスタの移行とアップグレード](/tidb-upgrade-migration-guide.md)
     - [TiFlashアップグレードガイド](/tiflash-upgrade-guide.md)
-  - 規模
+  - スケール
     - [TiUPを使用する（推奨）](/scale-tidb-using-tiup.md)
     - [TiDB Operatorを使用する](https://docs.pingcap.com/tidb-in-kubernetes/stable/scale-a-tidb-cluster)
   - バックアップと復元
@@ -182,13 +182,13 @@
     - [Top SQLページ](/dashboard/top-sql.md)
     - [Key Visualizerページ](/dashboard/dashboard-key-visualizer.md)
     - [指標関係グラフ](/dashboard/dashboard-metrics-relation.md)
-    - SQLステートメントの分析
-      - [SQLステートメントページ](/dashboard/dashboard-statement-list.md)
+    - SQL文の分析
+      - [SQL Statementsページ](/dashboard/dashboard-statement-list.md)
       - [SQL詳細ページ](/dashboard/dashboard-statement-details.md)
     - [スロークエリページ](/dashboard/dashboard-slow-query.md)
     - クラスタ診断
       - [クラスタ診断ページにアクセス](/dashboard/dashboard-diagnostics-access.md)
-      - [診断レポートをビュー](/dashboard/dashboard-diagnostics-report.md)
+      - [診断レポートを表示する](/dashboard/dashboard-diagnostics-report.md)
       - [診断機能を使用する](/dashboard/dashboard-diagnostics-usage.md)
     - [監視ページ](/dashboard/dashboard-monitoring.md)
     - [検索ログページ](/dashboard/dashboard-log-search.md)
@@ -216,7 +216,7 @@
       - [スロークエリを分析する](/analyze-slow-queries.md)
     - [TiDB メモリ不足](/troubleshoot-tidb-oom.md)
     - [ホットスポット](/troubleshoot-hot-spot-issues.md)
-    - [読み書きレイテンシの増加](/troubleshoot-cpu-issues.md)
+    - [読み書きレイテンシーの増加](/troubleshoot-cpu-issues.md)
     - [楽観的トランザクションにおける書き込み競合](/troubleshoot-write-conflicts.md)
     - [ディスクI/O使用率が高い](/troubleshoot-high-disk-io.md)
     - [ロックの競合](/troubleshoot-lock-conflicts.md)
@@ -299,9 +299,9 @@
       - [オプティマイザ修正コントロール](/optimizer-fix-controls.md)
     - [インデックスアドバイザー](/index-advisor.md)
 - チュートリアル
-  - [1つのリージョンに複数のアベイラビリティゾーンを展開](/multi-data-centers-in-one-city-deployment.md)
-  - [2つのリージョンに3つのアベイラビリティゾーンを展開](/three-data-centers-in-two-cities-deployment.md)
-  - [1つのリージョン展開で2つのアベイラビリティゾーンを実現](/two-data-centers-in-one-city-deployment.md)
+  - [1つのリージョンに複数のアベイラビリティゾーンをデプロイ](/multi-data-centers-in-one-city-deployment.md)
+  - [2つのリージョンに3つのアベイラビリティゾーンをデプロイ](/three-data-centers-in-two-cities-deployment.md)
+  - [1つのリージョンデプロイで2つのアベイラビリティゾーンを実現](/two-data-centers-in-one-city-deployment.md)
   - 履歴データを読む
     - ステイル読み取りを使用する（推奨）
       - [ステイル読み取りの使用シナリオ](/stale-read.md)
@@ -311,7 +311,7 @@
     - [`tidb_snapshot`システム変数を使用する](/read-historical-data.md)
   - [配置ルールを使用する](/configure-placement-rules.md)
   - [ロードベース分割を使用する](/configure-load-base-split.md)
-  - [店舗利用制限](/configure-store-limit.md)
+  - [ストア制限を使用する](/configure-store-limit.md)
   - [バッチ処理](/batch-processing.md)
   - PDマイクロサービスを使用する
     - [PDマイクロサービスの概要](/pd-microservices.md)
@@ -359,7 +359,7 @@
       - TiUPクラスタコマンド
         - [概要](/tiup/tiup-component-cluster.md)
         - [tiup cluster audit](/tiup/tiup-component-cluster-audit.md)
-        - [tiup cluster auditクリーンアップ](/tiup/tiup-component-cluster-audit-cleanup.md)
+        - [tiup cluster audit cleanup](/tiup/tiup-component-cluster-audit-cleanup.md)
         - [tiup cluster check](/tiup/tiup-component-cluster-check.md)
         - [tiup cluster clean](/tiup/tiup-component-cluster-clean.md)
         - [tiup cluster deploy](/tiup/tiup-component-cluster-deploy.md)
@@ -371,8 +371,8 @@
         - [tiup cluster help](/tiup/tiup-component-cluster-help.md)
         - [tiup cluster import](/tiup/tiup-component-cluster-import.md)
         - [tiup cluster list](/tiup/tiup-component-cluster-list.md)
-        - [tiup クラスターメタバックアップ](/tiup/tiup-component-cluster-meta-backup.md)
-        - [tiup クラスターメタ復元](/tiup/tiup-component-cluster-meta-restore.md)
+        - [tiup cluster meta backup](/tiup/tiup-component-cluster-meta-backup.md)
+        - [tiup cluster meta restore](/tiup/tiup-component-cluster-meta-restore.md)
         - [tiup cluster patch](/tiup/tiup-component-cluster-patch.md)
         - [tiup cluster prune](/tiup/tiup-component-cluster-prune.md)
         - [tiup cluster reload](/tiup/tiup-component-cluster-reload.md)
@@ -384,17 +384,17 @@
         - [tiup cluster start](/tiup/tiup-component-cluster-start.md)
         - [tiup cluster stop](/tiup/tiup-component-cluster-stop.md)
         - [tiup cluster template](/tiup/tiup-component-cluster-template.md)
-        - [TIUP クラスター TLS](/tiup/tiup-component-cluster-tls.md)
+        - [tiup cluster tls](/tiup/tiup-component-cluster-tls.md)
         - [tiup cluster upgrade](/tiup/tiup-component-cluster-upgrade.md)
       - TiUP DMコマンド
         - [概要](/tiup/tiup-component-dm.md)
         - [tiup dm audit](/tiup/tiup-component-dm-audit.md)
-        - [tiup dm デプロイ](/tiup/tiup-component-dm-deploy.md)
+        - [tiup dm deploy](/tiup/tiup-component-dm-deploy.md)
         - [tiup dm destroy](/tiup/tiup-component-dm-destroy.md)
-        - [tiup dm 無効化](/tiup/tiup-component-dm-disable.md)
+        - [tiup dm disable](/tiup/tiup-component-dm-disable.md)
         - [tiup dm display](/tiup/tiup-component-dm-display.md)
         - [tiup dm edit-config](/tiup/tiup-component-dm-edit-config.md)
-        - [tiup dm を有効にする](/tiup/tiup-component-dm-enable.md)
+        - [tiup dm enable](/tiup/tiup-component-dm-enable.md)
         - [tiup dm help](/tiup/tiup-component-dm-help.md)
         - [tiup dm import](/tiup/tiup-component-dm-import.md)
         - [tiup dm list](/tiup/tiup-component-dm-list.md)
@@ -405,8 +405,8 @@
         - [tiup dm restart](/tiup/tiup-component-dm-restart.md)
         - [tiup dm scale-in](/tiup/tiup-component-dm-scale-in.md)
         - [tiup dm scale-out](/tiup/tiup-component-dm-scale-out.md)
-        - [tiup dm 開始](/tiup/tiup-component-dm-start.md)
-        - [tiup dm 停止](/tiup/tiup-component-dm-stop.md)
+        - [tiup dm start](/tiup/tiup-component-dm-start.md)
+        - [tiup dm stop](/tiup/tiup-component-dm-stop.md)
         - [tiup dm template](/tiup/tiup-component-dm-template.md)
         - [tiup dm upgrade](/tiup/tiup-component-dm-upgrade.md)
     - [TiDBクラスタトポロジーリファレンス](/tiup/tiup-cluster-topology-reference.md)
@@ -472,27 +472,27 @@
       - データソースの管理
         - [移行対象のMySQLインスタンスを切り替える](/dm/usage-scenario-master-slave-switch.md)
       - タスクの管理
-        - [失敗したDDLステートメントを処理する](/dm/handle-failed-ddl-statements.md)
+        - [失敗したDDL文を処理する](/dm/handle-failed-ddl-statements.md)
         - [移行対象テーブルのスキーマを管理する](/dm/dm-manage-schema.md)
       - [クラスターのデータソースとタスク構成のエクスポートとインポート](/dm/dm-export-import-config.md)
       - [アラートの処理](/dm/dm-handle-alerts.md)
       - [日々のチェック](/dm/dm-daily-check.md)
     - 参照
       - アーキテクチャ
-        - [DMワーカー](/dm/dm-worker-intro.md)
+        - [DM-worker](/dm/dm-worker-intro.md)
         - [セーフモード](/dm/dm-safe-mode.md)
         - [リレーログ](/dm/relay-log.md)
         - [DDL処理](/dm/dm-ddl-compatible.md)
       - 機構
         - [DML複製メカニズム](/dm/dm-replication-logic.md)
       - コマンドライン
-        - [DMマスター＆DMワーカー](/dm/dm-command-line-flags.md)
+        - [DM-master＆DM-worker](/dm/dm-command-line-flags.md)
       - コンフィグレーションファイル
         - [概要](/dm/dm-config-overview.md)
         - [上流データベース構成](/dm/dm-source-configuration-file.md)
         - [タスク構成](/dm/task-configuration-file-full.md)
-        - [DMマスターコンフィグレーション](/dm/dm-master-configuration-file.md)
-        - [DMワーカーのコンフィグレーション](/dm/dm-worker-configuration-file.md)
+        - [DM-masterコンフィグレーション](/dm/dm-master-configuration-file.md)
+        - [DM-workerのコンフィグレーション](/dm/dm-worker-configuration-file.md)
         - [テーブルセレクター](/dm/table-selector.md)
       - [OpenAPI](/dm/dm-open-api.md)
       - [互換性カタログ](/dm/dm-compatibility-catalog.md)
@@ -561,7 +561,7 @@
   - TiProxy
     - [概要](/tiproxy/tiproxy-overview.md)
     - [負荷分散ポリシー](/tiproxy/tiproxy-load-balance.md)
-    - [交通情報リプレイ](/tiproxy/tiproxy-traffic-replay.md)
+    - [トラフィックリプレイ](/tiproxy/tiproxy-traffic-replay.md)
     - [コンフィグレーション](/tiproxy/tiproxy-configuration.md)
     - [コマンドラインパラメータ](/tiproxy/tiproxy-command-line-flags.md)
     - [モニタリング指標](/tiproxy/tiproxy-grafana.md)
@@ -604,7 +604,7 @@
   - [サーバーステータス変数](/status-variables.md)
   - コンフィグレーションファイルパラメータ
     - [tidb-server](/tidb-configuration-file.md)
-    - [tikvサーバー](/tikv-configuration-file.md)
+    - [tikv-server](/tikv-configuration-file.md)
     - [tiflash-server](/tiflash/tiflash-configuration.md)
     - [pd-server](/pd-configuration-file.md)
   - CLI
@@ -614,7 +614,7 @@
     - [pd-recover](/pd-recover.md)
   - コマンドラインフラグ
     - [tidb-server](/command-line-flags-for-tidb-configuration.md)
-    - [tikvサーバー](/command-line-flags-for-tikv-configuration.md)
+    - [tikv-server](/command-line-flags-for-tikv-configuration.md)
     - [tiflash-server](/tiflash/tiflash-command-line-flags.md)
     - [pd-server](/command-line-flags-for-pd-configuration.md)
   - 主要監視指標
@@ -647,7 +647,7 @@
       - [ユーザー定義変数](/user-defined-variables.md)
       - [式の構文](/expression-syntax.md)
       - [コメント構文](/comment-syntax.md)
-    - SQLステートメント
+    - SQL文
       - [概要](/sql-statements/sql-statement-overview.md)
       - [`ADMIN`](/sql-statements/sql-statement-admin.md)
       - [`ADMIN ALTER DDL JOBS`](/sql-statements/sql-statement-admin-alter-ddl.md)
@@ -862,7 +862,7 @@
       - [隔離レベル](/transaction-isolation-levels.md)
       - [楽観的トランザクション](/optimistic-transaction.md)
       - [悲観的トランザクション](/pessimistic-transaction.md)
-      - [非トランザクションDMLステートメント](/non-transactional-dml.md)
+      - [非トランザクションDML文](/non-transactional-dml.md)
       - [パイプラインDML](/pipelined-dml.md)
     - [ビュー](/views.md)
     - [パーティショニング](/partitioned-table.md)
@@ -873,7 +873,7 @@
     - 文字セットと照合順序
       - [概要](/character-set-and-collation.md)
       - [GBK](/character-set-gbk.md)
-    - [TTL（Time to Live：存続時間）](/time-to-live.md)
+    - [TTL (Time to Live)](/time-to-live.md)
     - [SQLにおける配置ルール](/placement-rules-in-sql.md)
     - システムテーブル
       - `mysql`スキーマ
@@ -959,7 +959,7 @@
   - [トポロジーラベルによるレプリカのスケジュール設定](/schedule-replicas-by-topology-labels.md)
   - [外部ストレージサービスのURI形式](/external-storage-uri.md)
   - [オンラインワークロードと`ADD INDEX`操作に関する相互作用テスト](/benchmark/online-workloads-and-add-index-operations.md)
-  - [DDLステートメントに埋め込まれた`ANALYZE`](/ddl_embedded_analyze.md)
+  - [DDL文に埋め込まれた`ANALYZE`](/ddl_embedded_analyze.md)
 - よくある質問
   - [FAQの概要](/faq/faq-overview.md)
   - [TiDBに関するよくある質問](/faq/tidb-faq.md)
