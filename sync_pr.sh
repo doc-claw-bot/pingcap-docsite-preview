@@ -297,7 +297,12 @@ get_destination_suffix
 clone_repo
 perform_sync_task
 
-# Final commit — always commits, even in SINGLE_COMMIT mode (which defers intermediate commits)
-# This ensures only one commit per preview sync, avoiding multiple Cloudflare builds.
-git add .
-git commit -m "Sync preview for PR https://github.com/$REPO_OWNER/$REPO_NAME/pull/$PR_NUMBER" || echo "No changes to commit"
+# Final commit for standalone syncs.
+# In multi-PR mode, SINGLE_COMMIT is set so sync_mult_prs.sh can accumulate all
+# changes and create a single commit (avoiding one Cloudflare build per PR).
+if [ -z "${SINGLE_COMMIT:-}" ]; then
+  git add .
+  git commit -m "Sync preview for PR https://github.com/$REPO_OWNER/$REPO_NAME/pull/$PR_NUMBER" || echo "No changes to commit"
+else
+  echo "SINGLE_COMMIT is set; deferring final commit to sync_mult_prs.sh"
+fi
