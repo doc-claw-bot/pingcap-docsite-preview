@@ -1,6 +1,9 @@
 name: Sync doc changes from multiple PRs
 
 on:
+  push:
+    branches:
+      - preview-multi-pr-sep-16-02
   workflow_dispatch:
 
 concurrency:
@@ -26,4 +29,7 @@ jobs:
         ./.github/git_push.sh ${{ github.ref_name }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DOCS_PR: 23757
+        DOCS_CN_PR: 21930
+        RELEASE_DIR: release-8.5
         SINGLE_COMMIT: true
