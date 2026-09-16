@@ -1,0 +1,15 @@
+{
+  "tidb": "TiDB",
+  "tidb-version": "8.5.8",
+  "ticdc-version": "8.5.8",
+  "tidb-operator-version": "v1.6.4",
+  "tidb-release-date": "2026-08-27",
+  "starter": "TiDB Cloud Starter",
+  "essential": "TiDB Cloud Essential",
+  "dedicated": "TiDB Cloud Dedicated",
+  "premium": "TiDB Cloud Premium",
+  "console-url": "tidbcloud.com",
+  "company": "PingCAP",
+  "enterprise-edition-url": "pingcap.com/tidb-enterprise/",
+  "support-ticket-url": "tidb.support.pingcap.com"
+}
