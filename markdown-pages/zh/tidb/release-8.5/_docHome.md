@@ -40,7 +40,7 @@ TiDB 简介，核心特性与应用场景
 
 <DocHomeCard href="/zh/tidb/stable/mysql-compatibility" label="与 MySQL 兼容性对比" icon="oss-mysql-blue">
 
-TiDB 高度兼容 MySQL 协议，以及 MySQL 5.7 和 MySQL 8.0 常用的功能及语法
+TiDB 高度兼容 MySQL 协议，以及 MySQL 8.x 常用的功能及语法
 
 </DocHomeCard>
 
@@ -60,7 +60,7 @@ TiDB Cloud 核心特性与应用场景简介
 
 </DocHomeCard>
 
-<DocHomeCard href="/tidbcloud/tidb-cloud-quickstart" label="快速上手 TiDB Cloud Starter" icon="cloud-getstarted-mauve">
+<DocHomeCard href="/tidbcloud/tidb-cloud-quickstart" label="快速上手 TiDB Cloud" icon="cloud-getstarted-mauve">
 
 快速了解和使用 TiDB Cloud
 
@@ -68,7 +68,7 @@ TiDB Cloud 核心特性与应用场景简介
 
 <DocHomeCard href="/zh/developer/" label="开发者指南" icon="cloud-developer-mauve">
 
-使用你熟悉的语言或框架连接到 TiDB Cloud Starter
+用熟悉的语言或框架连接到 TiDB Cloud
 
 </DocHomeCard>
 

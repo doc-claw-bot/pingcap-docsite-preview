@@ -6,7 +6,7 @@ hide_leftNav: true
 summary: TiDB Documentation provides how-to guides and references for using TiDB Cloud and TiDB Self-Managed, including data migration and application building. TiDB Cloud is a fully-managed Database-as-a-Service, offering easy access to the power of a cloud-native, distributed SQL database. TiDB is an open-source distributed SQL database with MySQL compatibility, horizontal scalability, and high availability. Developers can access documentation for application development and explore additional resources such as TiDB Playground, PingCAP Education, and community engagement opportunities.
 ---
 
-<DocHomeContainer title="TiDB Documentation" subTitle="Explore the how-to guides and references you need to use TiDB Cloud Starter, TiDB Cloud Dedicated and TiDB Self-Managed, migrate data, and build your applications on the database." ctaLabel="Start TiDB Cloud Starter for Free" ctaLink="https://tidbcloud.com/free-trial">
+<DocHomeContainer title="TiDB Documentation" subTitle="Explore how-to guides and references to get started with TiDB Cloud and TiDB Self-Managed, migrate data smoothly, and build applications with ease." ctaLabel="Start TiDB Cloud for Free" ctaLink="https://tidbcloud.com/free-trial">
 
 <DocHomeSection label="TiDB Cloud" anchor="tidb-cloud" id="tidb-cloud">
 
@@ -20,7 +20,7 @@ Learn what TiDB Cloud is as an easy-to-use database and its key features.
 
 </DocHomeCard>
 
-<DocHomeCard href="/tidbcloud/tidb-cloud-quickstart" label="Get started with TiDB Cloud Starter" icon="cloud-getstarted-mauve">
+<DocHomeCard href="/tidbcloud/tidb-cloud-quickstart" label="Get started with TiDB Cloud" icon="cloud-getstarted-mauve">
 
 Guide for an easy way to get started with TiDB Cloud.
 
@@ -32,15 +32,9 @@ Connect your application with the languages and frameworks you prefer.
 
 </DocHomeCard>
 
-<DocHomeCard href="/ai/vector-search-overview" label="Vector Search (PREVIEW)" icon="cloud-vector-mauve">
+<DocHomeCard href="/ai/vector-search-overview" label="Vector Search (Beta)" icon="cloud-vector-mauve">
 
-Explore native support of Vector Search in TiDB Cloud Starter to build your AI application.
-
-</DocHomeCard>
-
-<DocHomeCard href="/tidbcloud/tidb-cloud-roadmap" label="TiDB Cloud Roadmap" icon="cloud-roadmap-mauve">
-
-Planned features and releases for TiDB Cloud.
+Explore native support of Vector Search in TiDB Cloud to build your AI application.
 
 </DocHomeCard>
 
@@ -88,7 +82,7 @@ Connect your application with the languages and frameworks you prefer.
 
 <DocHomeCard href="/tidb/stable/mysql-compatibility" label="MySQL Compatibility" icon="oss-mysql-blue">
 
-TiDB is highly compatible with the MySQL protocol and the common features and syntax of MySQL 5.7 and MySQL 8.0.
+TiDB is highly compatible with the MySQL protocol and the common features and syntax of MySQL 8.x.
 
 </DocHomeCard>
 

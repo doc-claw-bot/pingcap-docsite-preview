@@ -59,6 +59,7 @@
   - [NVIDIA NIM](/ai/integrations/vector-search-auto-embedding-nvidia-nim.md)
   - [Amazon Titan](/ai/integrations/vector-search-auto-embedding-amazon-titan.md)
 - AI 框架
+  - [LangChain](/ai/integrations/vector-search-integrate-with-langchain.md)
   - [LlamaIndex](/ai/integrations/vector-search-integrate-with-llamaindex.md)
 - ORM 库
   - [SQLAlchemy](/ai/integrations/vector-search-integrate-with-sqlalchemy.md)
@@ -78,7 +79,8 @@
 ## 参考指南
 
 - [向量数据类型](/ai/reference/vector-search-data-types.md)
-- [向量函数和运算符](/ai/reference/vector-search-functions-and-operators.md)
+- [函数和运算符](/ai/reference/vector-search-functions-and-operators.md)
 - [向量搜索索引](/ai/reference/vector-search-index.md)
-- [向量搜索性能调优](/ai/reference/vector-search-improve-performance.md)
-- [向量搜索限制](/ai/reference/vector-search-limitations.md)
+- [性能调优](/ai/reference/vector-search-improve-performance.md)
+- [限制](/ai/reference/vector-search-limitations.md)
+- [更新记录](/ai/reference/vector-search-changelogs.md)

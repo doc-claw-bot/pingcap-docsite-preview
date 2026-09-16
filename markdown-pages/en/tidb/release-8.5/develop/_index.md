@@ -1,7 +1,7 @@
 ---
 title: Developer Guide Overview
 summary: Introduce the overview of the developer guide for TiDB Cloud and TiDB Self-Managed.
-aliases: ['/tidb/stable/dev-guide-overview/','/tidb/dev/dev-guide-overview/','/tidbcloud/dev-guide-overview/','/tidb/dev/connectors-and-apis/','/appdev/dev/','/tidb/dev/dev-guide-outdated-for-laravel']
+aliases: ['/tidb/stable/dev-guide-overview/','/tidb/dev/dev-guide-overview/','/tidbcloud/dev-guide-overview/']
 ---
 
 # Developer Guide Overview
@@ -19,7 +19,7 @@ This guide helps application developers quickly learn how to connect to TiDB, de
 Build your application with the language you use by following the guides with sample codes.
 
 <DevLangAccordion label="JavaScript" defaultExpanded>
-<DevToolCard title="Serverless Driver (PREVIEW)" logo="tidb" docLink="/developer/serverless-driver" githubLink="https://github.com/tidbcloud/serverless-js">
+<DevToolCard title="Serverless Driver (beta)" logo="tidb" docLink="/developer/serverless-driver" githubLink="https://github.com/tidbcloud/serverless-js">
 
 Connect to TiDB over HTTPS from edge environments (only applicable to TiDB Cloud).
 

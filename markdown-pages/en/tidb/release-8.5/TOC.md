@@ -629,7 +629,6 @@
   - Privileges
     - [Security Compatibility with MySQL](/security-compatibility-with-mysql.md)
     - [Privilege Management](/privilege-management.md)
-    - [Column-Level Privilege Management](/column-privilege-management.md)
     - [User Account Management](/user-account-management.md)
     - [TiDB Password Management](/password-management.md)
     - [Role-Based Access Control](/role-based-access-control.md)
@@ -685,6 +684,7 @@
       - [`CALIBRATE RESOURCE`](/sql-statements/sql-statement-calibrate-resource.md)
       - [`CANCEL DISTRIBUTION JOB`](/sql-statements/sql-statement-cancel-distribution-job.md)
       - [`CANCEL IMPORT JOB`](/sql-statements/sql-statement-cancel-import-job.md)
+      - [`CANCEL TRAFFIC JOBS`](/sql-statements/sql-statement-cancel-traffic-jobs.md)
       - [`COMMIT`](/sql-statements/sql-statement-commit.md)
       - [`CREATE BINDING`](/sql-statements/sql-statement-create-binding.md)
       - [`CREATE DATABASE`](/sql-statements/sql-statement-create-database.md)
@@ -735,6 +735,7 @@
       - [`PREPARE`](/sql-statements/sql-statement-prepare.md)
       - [`QUERY WATCH`](/sql-statements/sql-statement-query-watch.md)
       - [`RECOVER TABLE`](/sql-statements/sql-statement-recover-table.md)
+      - [`REFRESH STATS`](/sql-statements/sql-statement-refresh-stats.md)
       - [`RENAME USER`](/sql-statements/sql-statement-rename-user.md)
       - [`RENAME TABLE`](/sql-statements/sql-statement-rename-table.md)
       - [`REPLACE`](/sql-statements/sql-statement-replace.md)
@@ -796,6 +797,7 @@
       - [`SHOW TABLE REGIONS`](/sql-statements/sql-statement-show-table-regions.md)
       - [`SHOW TABLE STATUS`](/sql-statements/sql-statement-show-table-status.md)
       - [`SHOW TABLES`](/sql-statements/sql-statement-show-tables.md)
+      - [`SHOW TRAFFIC JOBS`](/sql-statements/sql-statement-show-traffic-jobs.md)
       - [`SHOW VARIABLES`](/sql-statements/sql-statement-show-variables.md)
       - [`SHOW WARNINGS`](/sql-statements/sql-statement-show-warnings.md)
       - [`SHUTDOWN`](/sql-statements/sql-statement-shutdown.md)
@@ -803,6 +805,8 @@
       - [`START TRANSACTION`](/sql-statements/sql-statement-start-transaction.md)
       - [`TABLE`](/sql-statements/sql-statement-table.md)
       - [`TRACE`](/sql-statements/sql-statement-trace.md)
+      - [`TRAFFIC CAPTURE`](/sql-statements/sql-statement-traffic-capture.md)
+      - [`TRAFFIC REPLAY`](/sql-statements/sql-statement-traffic-replay.md)
       - [`TRUNCATE`](/sql-statements/sql-statement-truncate.md)
       - [`UNLOCK STATS`](/sql-statements/sql-statement-unlock-stats.md)
       - [`UPDATE`](/sql-statements/sql-statement-update.md)
@@ -873,6 +877,7 @@
     - Character Set and Collation
       - [Overview](/character-set-and-collation.md)
       - [GBK](/character-set-gbk.md)
+      - [GB18030](/character-set-gb18030.md)
     - [TTL (Time to Live)](/time-to-live.md)
     - [Placement Rules in SQL](/placement-rules-in-sql.md)
     - System Tables
@@ -958,6 +963,7 @@
   - [TiDB Installation Packages](/binary-package.md)
   - [Schedule Replicas by Topology Labels](/schedule-replicas-by-topology-labels.md)
   - [URI Formats of External Storage Services](/external-storage-uri.md)
+  - [TiDB Workload Repository](/workload-repository.md)
   - [Interaction Test on Online Workloads and `ADD INDEX` Operations](/benchmark/online-workloads-and-add-index-operations.md)
   - [`ANALYZE` Embedded in DDL Statements](/ddl_embedded_analyze.md)
 - FAQs
