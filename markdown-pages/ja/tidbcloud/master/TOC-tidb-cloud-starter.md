@@ -13,7 +13,7 @@
   - [TiDB Cloudをお試しください](/tidb-cloud/tidb-cloud-quickstart.md)
   - [TiDB + AIツールを試してみよう](/tidb-cloud/use-tidb-cloud-with-ai-tools.md)
   - [HTAPを試してみてください](/tidb-cloud/tidb-cloud-htap-quickstart.md)
-  - [TiDB Cloud CLI をお試しください](/tidb-cloud/get-started-with-cli.md)
+  - [TiDB Cloud CLI (ticloud, Legacy) を試す](/tidb-cloud/get-started-with-cli.md)
 - 主要概念
   - [概要](/tidb-cloud/key-concepts.md)
   - [アーキテクチャ](/tidb-cloud/architecture-concepts.md)
@@ -111,7 +111,7 @@
     - [コプロセッサーキャッシュ](/coprocessor-cache.md)
     - ガベージコレクション（GC）
       - [概要](/garbage-collection-overview.md)
-      - [コンフィグレーション](/garbage-collection-configuration.md)
+      - [設定](/garbage-collection-configuration.md)
     - [TiFlashのパフォーマンスをチューニング](/tiflash/tune-tiflash-performance.md)
   - [TiDBのバージョンをアップグレードする](/tidb-cloud/upgrade-tidb-cluster.md)
   - [TiDB Cloud Starterインスタンスを削除する](/tidb-cloud/delete-tidb-cluster.md)
@@ -152,7 +152,7 @@
   - [Postmanで実行](/tidb-cloud/data-service-postman-integration.md)
   - [GitHubで自動デプロイ](/tidb-cloud/data-service-manage-github-connection.md)
   - [Next.jsでOpenAPI仕様を使用する](/tidb-cloud/data-service-oas-with-nextjs.md)
-  - [データアプリコンフィグレーションファイル](/tidb-cloud/data-service-app-config-files.md)
+  - [データアプリ設定ファイル](/tidb-cloud/data-service-app-config-files.md)
   - [応答とステータスコード](/tidb-cloud/data-service-response-and-status-code.md)
 - セキュリティ
   - [セキュリティ概要](/tidb-cloud/security-overview.md)
@@ -461,7 +461,7 @@
       - [`schema_unused_indexes`](/sys-schema/sys-schema-unused-indexes.md)
   - [メタデータロック](/metadata-lock.md)
   - [TiDB高速テーブル作成](/accelerated-table-creation.md)
-- CLI リファレンス ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
+- TiDB Cloud CLI (ticloud, Legacy) リファレンス ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
   - [概要](/tidb-cloud/cli-reference.md)
   - 認証
     - [ログイン](/tidb-cloud/ticloud-auth-login.md)

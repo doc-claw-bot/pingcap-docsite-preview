@@ -16,7 +16,7 @@
   - [サンプルデータベースのインポート](/import-example-data.md)
 - デプロイ
   - [ソフトウェアおよびハードウェアの要件](/hardware-and-software-requirements.md)
-  - [環境コンフィグレーションチェックリスト](/check-before-deployment.md)
+  - [環境設定チェックリスト](/check-before-deployment.md)
   - プランクラスタトポロジ
     - [最小トポロジー](/minimal-deployment-topology.md)
     - [TiFlashトポロジー](/tiflash-deployment-topology.md)
@@ -83,17 +83,17 @@
       - [TiCDCクラシックアーキテクチャ](/ticdc/ticdc-classic-architecture.md)
     - [TiCDCのデータレプリケーション機能](/ticdc/ticdc-data-replication-capabilities.md)
     - [TiCDCサーバー構成](/ticdc/ticdc-server-config.md)
-    - [TiCDC Changefeedフィード構成](/ticdc/ticdc-changefeed-config.md)
+    - [TiCDC Changefeed設定](/ticdc/ticdc-changefeed-config.md)
     - [TiCDCクライアント認証](/ticdc/ticdc-client-authentication.md)
     - [単一行データのデータ整合性検証](/ticdc/ticdc-integrity-check.md)
     - [アップストリームおよびダウンストリームTiDBクラスタのデータ整合性検証](/ticdc/ticdc-upstream-downstream-check.md)
     - [TiCDCにおけるUPDATEイベント分割時の動作](/ticdc/ticdc-split-update-behavior.md)
     - 出力プロトコル
       - [TiCDC Avroプロトコル](/ticdc/ticdc-avro-protocol.md)
-      - [TiCDC Canal- JSONプロトコル](/ticdc/ticdc-canal-json.md)
+      - [TiCDC Canal-JSONプロトコル](/ticdc/ticdc-canal-json.md)
       - [TiCDC CSVプロトコル](/ticdc/ticdc-csv.md)
-      - [TiCDCDebeziumプロトコル](/ticdc/ticdc-debezium.md)
-      - [TiCDCオープンプロトコル](/ticdc/ticdc-open-protocol.md)
+      - [TiCDC Debeziumプロトコル](/ticdc/ticdc-debezium.md)
+      - [TiCDC Open Protocol](/ticdc/ticdc-open-protocol.md)
       - [TiCDC Simpleプロトコル](/ticdc/ticdc-simple-protocol.md)
     - [TiCDC OpenAPI v2](/ticdc/ticdc-open-api-v2.md)
     - [TiCDC OpenAPI v1](/ticdc/ticdc-open-api.md)
@@ -161,7 +161,7 @@
   - [毎日のチェックリスト](/daily-check.md)
   - [TiFlashの管理](/tiflash/maintain-tiflash.md)
   - [TiUPを使用してTiDBを管理](/maintain-tidb-using-tiup.md)
-  - [コンフィグレーションを動的に変更する](/dynamic-config.md)
+  - [設定を動的に変更する](/dynamic-config.md)
   - [オンラインの安全でない復旧](/online-unsafe-recovery.md)
   - [プライマリクラスタとセカンダリクラスタ間でデータを複製する](/replicate-between-primary-and-secondary-clusters.md)
 - 監視と警告
@@ -196,7 +196,7 @@
     - インスタンスプロファイリング
       - [手動プロファイリング](/dashboard/dashboard-profiling.md)
       - [継続的なプロファイリング](/dashboard/continuous-profiling.md)
-    - セッション管理とコンフィグレーション
+    - セッション管理と設定
       - [セッションを共有](/dashboard/dashboard-session-share.md)
       - [SSOの設定](/dashboard/dashboard-session-sso.md)
     - [FAQ](/dashboard/dashboard-faq.md)
@@ -213,6 +213,7 @@
   - 問題シナリオ
     - スロークエリ
       - [スロークエリを特定する](/identify-slow-queries.md)
+      - [スロークエリのトリガールールを設定する](/config-slow-query-trigger-rules.md)
       - [スロークエリを分析する](/analyze-slow-queries.md)
     - [TiDB メモリ不足](/troubleshoot-tidb-oom.md)
     - [ホットスポット](/troubleshoot-hot-spot-issues.md)
@@ -224,7 +225,7 @@
   - 診断方法
     - [SQL診断](/information-schema/information-schema-sql-diagnostics.md)
     - [ステートメントサマリーテーブル](/statement-summary-tables.md)
-    - [Top SQL を使用して高コストなクエリを特定する](/dashboard/top-sql.md)
+    - [Top SQL を使用して高コストクエリを特定する](/dashboard/top-sql.md)
     - [ログを使用して高負荷なクエリを特定する](/identify-expensive-queries.md)
     - [クラスタのオンサイト情報を保存および復元する](/sql-plan-replayer.md)
     - [TiKVにおけるステイル読み取りとsafe-tsの理解](/troubleshoot-stale-read.md)
@@ -240,7 +241,7 @@
       - [TiFlashの性能分析方法](/tiflash-performance-tuning-methods.md)
       - [TiCDCの性能分析方法](/ticdc-performance-tuning-methods.md)
       - [レイテンシーの内訳](/latency-breakdown.md)
-  - コンフィグレーション調整
+  - 設定調整
     - [オペレーティングシステムのパフォーマンスを調整します](/tune-operating-system.md)
     - [TiDBメモリのチューニング](/configure-memory-usage.md)
     - [TiKVスレッドを調整](/tune-tikv-thread-performance.md)
@@ -252,7 +253,7 @@
     - [コプロセッサーキャッシュ](/coprocessor-cache.md)
     - ガベージコレクション（GC）
       - [概要](/garbage-collection-overview.md)
-      - [コンフィグレーション](/garbage-collection-configuration.md)
+      - [設定](/garbage-collection-configuration.md)
   - SQLチューニング
     - [概要](/sql-tuning-overview.md)
     - クエリ実行計画の理解
@@ -310,16 +311,16 @@
       - [`tidb_external_ts`を使用してステイル読み取りを実行する](/tidb-external-ts.md)
     - [`tidb_snapshot`システム変数を使用する](/read-historical-data.md)
   - [配置ルールを使用する](/configure-placement-rules.md)
-  - [ロードベース分割を使用する](/configure-load-base-split.md)
+  - [ロードベーススプリットを使用する](/configure-load-base-split.md)
   - [ストア制限を使用する](/configure-store-limit.md)
   - [バッチ処理](/batch-processing.md)
   - PDマイクロサービスを使用する
     - [PDマイクロサービスの概要](/pd-microservices.md)
     - [TiUPを使用してPDマイクロサービスノードをスケーリングする](/scale-microservices-using-tiup.md)
-    - [TSOコンフィグレーションファイル](/tso-configuration-file.md)
-    - [TSOコンフィグレーションフラグ](/command-line-flags-for-tso-configuration.md)
-    - [スケジュールコンフィグレーションファイル](/scheduling-configuration-file.md)
-    - [スケジューリングコンフィグレーションフラグ](/command-line-flags-for-scheduling-configuration.md)
+    - [TSO設定ファイル](/tso-configuration-file.md)
+    - [TSO設定フラグ](/command-line-flags-for-tso-configuration.md)
+    - [スケジュール設定ファイル](/scheduling-configuration-file.md)
+    - [スケジューリング設定フラグ](/command-line-flags-for-scheduling-configuration.md)
 - TiDBツール
   - [概要](/ecosystem-tool-user-guide.md)
   - [ユースケース](/ecosystem-tool-user-case.md)
@@ -455,7 +456,7 @@
         - [楽観的モード](/dm/feature-shard-merge-optimistic.md)
         - [シャーディングDDLロックを手動で処理する](/dm/manually-handling-sharding-ddl-locks.md)
       - [gh-ost/pt-osc を使用する MySQL データベースから移行する](/dm/feature-online-ddl.md)
-      - [より多くのカラムを持つダウンストリーム TiDB テーブルにデータを移行する](/migrate-with-more-columns-downstream.md)
+      - [より多くのカラムを持つ下流の TiDB テーブルにデータを移行する](/migrate-with-more-columns-downstream.md)
       - [継続的なデータ検証](/dm/dm-continuous-data-validation.md)
     - 管理
       - クラスタのアップグレード
@@ -487,12 +488,12 @@
         - [DML複製メカニズム](/dm/dm-replication-logic.md)
       - コマンドライン
         - [DM-master＆DM-worker](/dm/dm-command-line-flags.md)
-      - コンフィグレーションファイル
+      - 設定ファイル
         - [概要](/dm/dm-config-overview.md)
         - [上流データベース構成](/dm/dm-source-configuration-file.md)
         - [タスク構成](/dm/task-configuration-file-full.md)
-        - [DM-masterコンフィグレーション](/dm/dm-master-configuration-file.md)
-        - [DM-workerのコンフィグレーション](/dm/dm-worker-configuration-file.md)
+        - [DM-master設定](/dm/dm-master-configuration-file.md)
+        - [DM-workerの設定](/dm/dm-worker-configuration-file.md)
         - [テーブルセレクター](/dm/table-selector.md)
       - [OpenAPI](/dm/dm-open-api.md)
       - [互換性カタログ](/dm/dm-compatibility-catalog.md)
@@ -541,7 +542,7 @@
     - [エラー解決](/tidb-lightning/tidb-lightning-error-resolution.md)
     - [トラブルシューティング](/tidb-lightning/troubleshoot-tidb-lightning.md)
     - 参照
-      - [コンフィグレーションファイル](/tidb-lightning/tidb-lightning-configuration.md)
+      - [設定ファイル](/tidb-lightning/tidb-lightning-configuration.md)
       - [コマンドラインフラグ](/tidb-lightning/tidb-lightning-command-line-full.md)
       - [監視](/tidb-lightning/monitor-tidb-lightning.md)
       - [ウェブインターフェース](/tidb-lightning/tidb-lightning-web-interface.md)
@@ -562,7 +563,7 @@
     - [概要](/tiproxy/tiproxy-overview.md)
     - [負荷分散ポリシー](/tiproxy/tiproxy-load-balance.md)
     - [トラフィックリプレイ](/tiproxy/tiproxy-traffic-replay.md)
-    - [コンフィグレーション](/tiproxy/tiproxy-configuration.md)
+    - [設定](/tiproxy/tiproxy-configuration.md)
     - [コマンドラインパラメータ](/tiproxy/tiproxy-command-line-flags.md)
     - [モニタリング指標](/tiproxy/tiproxy-grafana.md)
     - [API](/tiproxy/tiproxy-api.md)
@@ -602,7 +603,7 @@
   - [システム変数](/system-variables.md)
   - [システム変数リファレンス](/system-variable-reference.md)
   - [サーバーステータス変数](/status-variables.md)
-  - コンフィグレーションファイルパラメータ
+  - 設定ファイルパラメータ
     - [tidb-server](/tidb-configuration-file.md)
     - [tikv-server](/tikv-configuration-file.md)
     - [tiflash-server](/tiflash/tiflash-configuration.md)
