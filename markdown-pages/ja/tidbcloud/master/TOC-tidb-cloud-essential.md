@@ -89,7 +89,7 @@
         - ロジック最適化
           - [概要](/sql-logical-optimization.md)
           - [サブクエリ関連の最適化](/subquery-optimization.md)
-          - [カラムの剪定](/column-pruning.md)
+          - [列プルーニング](/column-pruning.md)
           - [相関サブクエリのデコヒーレンス](/correlated-subquery-optimization.md)
           - [最大値/最小値を削除する](/max-min-eliminate.md)
           - [Predicate Push Down](/predicate-push-down.md)
@@ -144,9 +144,12 @@
     - [Amazon S3からのデータインポート中に発生するアクセス拒否エラーのトラブルシューティング](/tidb-cloud/troubleshoot-import-access-denied-error.md)
     - [AWS DMSをTiDB Cloudに接続する](/tidb-cloud/tidb-cloud-connect-aws-dms.md)
 - ストリームデータ ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
-  - [変更フィードの概要](/tidb-cloud/essential-changefeed-overview.md)
+  - [変更フィード](/tidb-cloud/essential-changefeed-overview.md)
   - [MySQLへのシンク](/tidb-cloud/essential-changefeed-sink-to-mysql.md)
   - [Apache Kafkaへのシンク](/tidb-cloud/essential-changefeed-sink-to-kafka.md)
+  - [TiDB Cloud Lake へのシンク](/tidb-cloud/data-pipeline-essential-sink-to-lake.md)
+  - 参照
+    - [TiDB Cloud Lake 向け Data Pipeline SQL 互換性](/tidb-cloud/data-pipeline-lake-sql-compatibility.md)
 - セキュリティ
   - [セキュリティ概要](/tidb-cloud/security-overview.md)
   - IDアクセス制御

@@ -101,7 +101,7 @@
         - ロジック最適化
           - [概要](/sql-logical-optimization.md)
           - [サブクエリ関連の最適化](/subquery-optimization.md)
-          - [カラムの剪定](/column-pruning.md)
+          - [列プルーニング](/column-pruning.md)
           - [相関サブクエリのデコヒーレンス](/correlated-subquery-optimization.md)
           - [最大値/最小値を削除する](/max-min-eliminate.md)
           - [Predicate Push Down](/predicate-push-down.md)
@@ -191,17 +191,19 @@
   - [データアプリ設定ファイル](/tidb-cloud/data-service-app-config-files.md)
   - [応答とステータスコード](/tidb-cloud/data-service-response-and-status-code.md)
 - ストリームデータ
-  - [変更フィードの概要](/tidb-cloud/changefeed-overview.md)
+  - [変更フィード](/tidb-cloud/changefeed-overview.md)
   - [MySQLシンクへ](/tidb-cloud/changefeed-sink-to-mysql.md)
   - [Kafkaシンクへ](/tidb-cloud/changefeed-sink-to-apache-kafka.md)
   - [Pulsarシンクへ](/tidb-cloud/changefeed-sink-to-apache-pulsar.md)
   - [TiDB Cloud Sinkへ](/tidb-cloud/changefeed-sink-to-tidb-cloud.md)
   - [クラウドストレージへ](/tidb-cloud/changefeed-sink-to-cloud-storage.md)
+  - [TiDB Cloud Lake へ](/tidb-cloud/data-pipeline-dedicated-sink-to-lake.md)
   - 参照
     - [AWSでセルフホスト型のKafkaプライベートリンクサービスをセットアップする](/tidb-cloud/setup-aws-self-hosted-kafka-private-link-service.md)
     - [Azureでセルフホスト型Kafkaプライベートリンクサービスをセットアップする](/tidb-cloud/setup-azure-self-hosted-kafka-private-link-service.md)
     - [Google Cloud でセルフホスト型の Kafka プライベートサービスコネクトを設定する](/tidb-cloud/setup-self-hosted-kafka-private-service-connect.md)
     - [Changefeeds用のプライベートエンドポイントを設定する](/tidb-cloud/set-up-sink-private-endpoint.md)
+    - [TiDB Cloud Lake 向け Data Pipeline SQL 互換性](/tidb-cloud/data-pipeline-lake-sql-compatibility.md)
 - セキュリティ
   - [セキュリティ概要](/tidb-cloud/security-overview.md)
   - IDアクセス制御

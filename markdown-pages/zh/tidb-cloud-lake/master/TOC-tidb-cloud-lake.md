@@ -7,6 +7,7 @@
 
 - [概览](/tidb-cloud-lake/lake-overview.md)
 - [快速入门](/tidb-cloud-lake/lake-quick-start.md)
+- [Lake PoC 指南](/tidb-cloud-lake/guides/lake-poc.md)
 
 ## 指南
 
@@ -48,6 +49,7 @@
     - [PostgreSQL - 凭证](/tidb-cloud-lake/guides/postgresql-credentials.md)
     - [FeiShuBot](/tidb-cloud-lake/guides/feishubot.md)
     - [Kafka - 凭证](/tidb-cloud-lake/guides/kafka-credentials.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
+    - [TiDB 数据源](/tidb-cloud-lake/guides/tidb-data-source.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
   - 集成任务
     - [概览](/tidb-cloud-lake/guides/integration-tasks.md)
     - [任务管理](/tidb-cloud-lake/guides/task-management.md)
@@ -56,6 +58,7 @@
     - [MySQL 集成任务](/tidb-cloud-lake/guides/integrate-with-mysql.md)
     - [PostgreSQL 集成任务](/tidb-cloud-lake/guides/integrate-with-postgresql.md)
     - [Kafka Consumer 集成任务](/tidb-cloud-lake/guides/integrate-with-kafka.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
+    - [TiDB 集成任务（预览版）](/tidb-cloud-lake/guides/integrate-with-tidb.md) ![PREVIEW](https://docs-download.pingcap.com/media/images/docs/tidb-cloud/blank_transparent_placeholder.png)
 - 加载数据
   - 使用 Stage
     - [Stage 概述](/tidb-cloud-lake/guides/stage-overview.md)
@@ -131,8 +134,6 @@
   - [Fail-Safe](/tidb-cloud-lake/guides/fail-safe.md)
   - [从操作错误中恢复](/tidb-cloud-lake/guides/recovery-from-operational-errors.md)
 - 管理
-  - [AI 驱动功能](/tidb-cloud-lake/guides/ai-powered-features.md)
-  - [管理成本](/tidb-cloud-lake/guides/manage-costs.md)
   - [监控使用情况](/tidb-cloud-lake/guides/monitor-usage.md)
   - [数据生命周期](/tidb-cloud-lake/guides/data-lifecycle.md)
   - [数据血缘](/tidb-cloud-lake/guides/data-lineage.md)
