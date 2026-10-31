@@ -67,6 +67,7 @@
       - [通过 Lark 订阅](/tidb-cloud/monitor-alert-lark.md)
     - [事件](/tidb-cloud/tidb-cloud-events.md)
     - [集成 TiDB Cloud 与 Datadog](/tidb-cloud/monitor-datadog-integration-for-tidb-x.md)
+    - [集成 TiDB Cloud 与 New Relic](/tidb-cloud/monitor-new-relic-integration-for-tidb-x.md)
   - 性能调优
     - [概览](/tidb-cloud/tidb-cloud-tune-performance-overview.md)
     - [分析性能](/tidb-cloud/tune-performance.md)
@@ -147,7 +148,8 @@
   - [Changefeed](/tidb-cloud/essential-changefeed-overview.md)
   - [同步到 MySQL](/tidb-cloud/essential-changefeed-sink-to-mysql.md)
   - [同步到 Apache Kafka](/tidb-cloud/essential-changefeed-sink-to-kafka.md)
-  - [Sink to TiDB Cloud Lake](/tidb-cloud/data-pipeline-essential-sink-to-lake.md)
+  - [同步到 Cloud Storage](/tidb-cloud/changefeed-sink-to-cloud-storage.md)
+  - [同步到 TiDB Cloud Lake](/tidb-cloud/data-pipeline-essential-sink-to-lake.md)
   - 参考
     - [TiDB Cloud Lake 的 Data Pipeline SQL 兼容性](/tidb-cloud/data-pipeline-lake-sql-compatibility.md)
 - 安全
@@ -192,6 +194,7 @@
   - [Gitpod](/develop/dev-guide-playground-gitpod.md)
   - [n8n](/tidb-cloud/integrate-tidbcloud-with-n8n.md)
   - [Netlify](/tidb-cloud/integrate-tidbcloud-with-netlify.md)
+  - [New Relic](/tidb-cloud/monitor-new-relic-integration-for-tidb-x.md)
   - [ProxySQL](/develop/dev-guide-proxysql-integration.md)
   - Terraform
     - [Terraform 集成概览](/tidb-cloud/terraform-tidbcloud-provider-overview.md)

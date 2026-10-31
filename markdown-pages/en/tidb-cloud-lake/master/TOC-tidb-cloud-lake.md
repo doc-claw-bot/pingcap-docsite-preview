@@ -114,6 +114,7 @@
   - [Aggregating Index](/tidb-cloud-lake/guides/aggregating-index.md)
   - [Full-Text Index](/tidb-cloud-lake/guides/full-text-index.md)
   - [Ngram Index](/tidb-cloud-lake/guides/ngram-index.md)
+  - [Partition Fuse Tables](/tidb-cloud-lake/guides/partition-by.md)
   - [Query Result Cache](/tidb-cloud-lake/guides/query-result-cache.md)
 - Security & Reliability
   - [Overview](/tidb-cloud-lake/guides/security-reliability.md)
@@ -212,6 +213,7 @@
       - [system.views](/tidb-cloud-lake/sql/system-views.md)
       - [system.virtual_columns](/tidb-cloud-lake/sql/system-virtual-columns.md)
     - System History Tables
+      - [Overview](/tidb-cloud-lake/sql/system-history-tables.md)
       - [system_history.access_history](/tidb-cloud-lake/sql/system-history-access-history.md)
       - [system_history.log_history](/tidb-cloud-lake/sql/system-history-log-history.md)
       - [system_history.login_history](/tidb-cloud-lake/sql/system-history-login-history.md)
@@ -1140,9 +1142,10 @@
       - [VECTOR_NORM](/tidb-cloud-lake/sql/vector-norm.md)
       - [Vector Functions](/tidb-cloud-lake/sql/vector-functions.md)
     - Hash Functions
+      - [Overview](/tidb-cloud-lake/sql/hash-functions.md)
       - [BLAKE3](/tidb-cloud-lake/sql/blake.md)
+      - [BUCKET](/tidb-cloud-lake/sql/bucket.md)
       - [CITY64WITHSEED](/tidb-cloud-lake/sql/city-withseed.md)
-      - [Hash Functions](/tidb-cloud-lake/sql/hash-functions.md)
       - [MD5](/tidb-cloud-lake/sql/md.md)
       - [SHA](/tidb-cloud-lake/sql/sha.md)
       - [SHA1](/tidb-cloud-lake/sql/sha-sql.md)
